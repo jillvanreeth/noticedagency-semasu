@@ -1,0 +1,12 @@
+.DS_Store
+.cache
+
+/.idea
+.idea/*
+.idea/workspace.xml
+**/.idea/workspace.xml
+*.xml
+
+/node_modules
+/htdocs/node_modules
+/vendor
