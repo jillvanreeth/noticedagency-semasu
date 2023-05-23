@@ -1,0 +1,235 @@
+.creditplan {
+	@include media('small') {
+		position: relative;
+		z-index: 1;
+		height: auto;
+		margin: 0;
+		margin-bottom: gap('large');
+		padding: gap('xxxlarge') 0 0;
+		//	background-color: transparent;
+	}
+	@include media('large') {
+		padding: gap('xxxlarge') 0;
+	}
+
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background-color: color('theme-4','lighter',3);
+}
+
+.creditplan__inner {
+	@include media('small') {
+		padding: 0 gap('large');
+	}
+
+	display: block;
+	width: 100%;
+	max-width: section('medium');
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+.creditplan__item {
+	@include media('small') {
+		position: relative;
+		margin-bottom: gap('xlarge');
+	}
+	@include media('large') {
+		position: relative;
+		margin: 0;
+		padding: gap('large') gap('xxxxlarge') gap('large');
+		border: 2px solid color('light');
+		&.first {
+			border-top: none;
+			border-right: none;
+		}
+
+		&.second {
+			border-top: none;
+			border-left: none;
+		}
+
+		&.third {
+			height: 200px;
+			margin-bottom: 380px;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-top: none;
+			border-right: none;
+			border-bottom: none;
+		}
+	}
+	@include media('large','max-width') {
+		&.third {
+			margin-bottom: 0;
+		}
+	}
+	@include media('small','max-width') {
+		position: sticky;
+		top: 70px;
+		height: 100vh;
+		padding: gap('large') gap('small');
+
+		&.first {
+			z-index: 1;
+		}
+
+		&.second {
+			z-index: 2;
+			background-color: color('theme-4','lighter',7);
+		}
+
+		&.third {
+			z-index: 3;
+			background-color: color('theme-4');
+		}
+	}
+}
+
+.creditplan__item__inner {
+	@include media('large') {
+		.third & {
+			transform: translateY(140px);
+		}
+	}
+
+	position: relative;
+	z-index: 1;
+}
+
+.creditplan__step {
+	@include media('small') {
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+	@include media('large') {
+		width: 56px;
+		height: 56px;
+		.first & {
+			top: 0;
+			left: 0;
+			margin-left: -28px;
+		}
+
+		.second & {
+			top: gap('large');
+			right: 0;
+			left: auto;
+			margin-right: -28px;
+		}
+
+		.third & {
+			top: auto;
+			bottom: 0;
+			left: 0;
+			margin-left: -28px;
+		}
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	color: color('light');
+	border: 2px solid color('light');
+	border-radius: 50%;
+	background-color: color('theme-4');
+}
+
+.creditplan__step__label {
+	transition: all .5s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-family: font('light');
+	font-size: fontSize('xlarge');
+	line-height: 1;
+	border-radius: 50%;
+
+	will-change: transform;
+	.is-animated & {
+		transform: scale(7);
+		color: color('theme-4');
+		border: none;
+		background-color: lighten(color('theme-4'), 10);
+	}
+
+	.is-in-viewport & {
+		color: color('theme-4');
+		font-size: titleSize('h1');
+	}
+}
+
+.creditplan__title {
+	@include media('small') {
+		padding-top: 0;
+		padding-left: gap('large');
+		font-family: font('light');
+		font-size: titleSize('h1');
+	}
+	@include media('large') {
+		padding-left: 0;
+	}
+
+	padding-top: gap('small');
+	color: color('light');
+	font-family: font('normal');
+	font-size: titleSize('h4');
+	line-height: 1;
+}
+
+.creditplan__content {
+	@include media('small') {
+		padding-top: gap('medium');
+	}
+	@include media('large') {
+		padding-top: gap('small');
+	}
+
+	padding-top: gap('xsmall');
+	color: color('light');
+	font-size: fontSize('small');
+}
+
+.creditplan__check {
+	color: color('theme-1');
+	font-family: font('bold');
+	font-size: fontSize('small');
+}
+
+.creditplan__check__item {
+	display: flex;
+	align-items: center;
+	padding-top: gap('xsmall');
+
+	&:first-child {
+		padding-top: gap('small');
+	}
+}
+
+.creditplan__check__symbol {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-right: gap('small');
+
+	svg g {
+		fill: color('theme-1');
+	}
+}
+
+
+.creditplan__cta {
+	@include media('large') {
+		padding-top: gap('large');
+	}
+
+	display: block;
+	padding-top: gap('medium');
+}

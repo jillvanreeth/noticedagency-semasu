@@ -1,0 +1,158 @@
+.businessIntro {
+	@include media('medium') {
+		margin: 0 gap('small');
+	}
+
+	background-color: color('theme-4');
+}
+
+.businessIntro__inner {
+	@include media('small') {
+		padding: gap('large') gap('large') 0;
+	}
+	@include media('large') {
+		padding: gap('large') gap('xxlarge') 0;
+	}
+
+	display: block;
+	padding: gap('large') 0 0;
+	color: color('light');
+}
+
+.businessIntro__content {
+	@include media('small') {
+		padding: 0;
+	}
+	@include media('large') {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	display: flex;
+	flex-direction: column;
+	padding: 0 gap('small');
+}
+
+.businessIntro__header {
+	@include media('large') {
+		flex: 0 0 30%;
+	}
+
+	flex: 0 0 30%;
+}
+
+.businessIntro__keywords {
+	@include media('large') {
+		flex: 0 0 66%;
+		padding-top: 0;
+	}
+
+	display: block;
+	flex: 0 0 100%;
+	padding-top: gap('medium');
+}
+
+.businessIntro__keywords__list {
+	@include media('small') {
+		column-gap: gap('xxsmall');
+		columns: 2;
+	}
+
+	display: block;
+	margin: 0;
+	margin-bottom: - gap('xxsmall');
+	padding: 0;
+	padding-bottom: gap('xxsmall');
+	list-style-type: none;
+	list-style: none;
+}
+
+.businessIntro__keywords__listitem {
+	@include media('medium') {
+		font-size: fontSize('large');
+	}
+	@include media('large') {
+		font-size: fontSize('xlarge');
+	}
+
+	display: flex;
+	flex: 0 0 50%;
+	margin: 0 0 gap('xxsmall') 0;
+	padding: 0;
+	font-family: font('normal');
+	font-size: fontSize('medium');
+
+	break-inside: avoid;
+}
+
+.businessIntro__symbol {
+	@include media('small') {
+		margin: gap('xxsmall') gap('xxsmall') 0 0;
+	}
+
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: gap('xxxsmall') gap('xxxsmall') 0 0;
+}
+
+
+
+.businessIntro__visual {
+	@include media('small') {
+		transform: translateY(gap('large'));
+		margin-bottom: gap('large');
+		padding: 0;
+	}
+	@include media('medium') {
+		transform: translateY(gap('xlarge'));
+		margin-bottom: gap('xlarge');
+	}
+	@include media('large') {
+		padding: 0 gap('xlarge');
+	}
+
+	display: block;
+	padding-top: gap('medium');
+	overflow: hidden;
+}
+
+.businessIntro__visual {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+
+	img {
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.businessIntro__visual__sizer {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-top: 58%;
+}
+
+.businessIntro__visual__inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.businessIntro__visual__reset {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}

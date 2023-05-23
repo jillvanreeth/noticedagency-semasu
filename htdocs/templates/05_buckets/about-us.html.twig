@@ -1,0 +1,77 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}About us{% endblock %}
+{% block ogtitle %}About us{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+<section class="about__hero">
+  <div class="bgc--theme-0">
+    {% embed './03_molecules/breadcrumbs.html.twig' %}
+      {% 
+        set breadcrumbs = [
+          { 
+            label: 'The experts',
+            link: '#the-experts', 
+          },
+          { 
+            label: 'How we work',
+            link: '#how-we-work', 
+          },
+          { 
+            label: 'Why Semasu',
+            link: '#why-semasu', 
+          },
+        ]
+      %}   
+    {% endembed %}
+  </div>
+  
+  {% embed './04_organisms/hero.html.twig' with {'fcColor' : 'fc--light', 'bgColor': 'bgc--theme-0', 'variant': 'hero--split' } %}
+    {% block herotitle %} About us {% endblock %}
+    {% block herosubtitle %} We at Semasu are people of action. And along the way, you may notice that we’re very passionate about what we do. Service, quality and delivery is in our DNA. We make it our job to make your workflow. {% endblock %}
+  {% endembed %} 
+
+  {% include './02_atoms/flare/flare.html.twig' with {'animate' : true, 'flareColor': 'theme-2'} %}
+  
+</section>
+
+<section class="section about__primary">
+  
+  {% include './03_molecules/teamslider.html.twig' %}
+  
+  <div class="section--xlarge">
+    <div class="about__primary__item">
+      {% embed './03_molecules/quote.html.twig' %}
+        {% block quotecontent %} Solutions should be long-lasting, sustainable and low maintenance. <strong class="fc--theme-2">A collaboration and communication roadmap</strong> will provide you with a clear overview of the big picture and insights into what works best for your business. {% endblock %}
+        {% block quoteauthor %}  {% endblock %}
+      {% endembed %}
+    </div>
+    
+    <div class="about__primary__item stretch">
+      {% include './04_organisms/laptop.html.twig' %}
+    </div>
+    </div>   
+</section> 
+
+<section id="how-we-work" class="section about__secondary">
+  {% include './03_molecules/hoWeWork.html.twig' %}
+</section>
+
+<section id="why-semasu" class="section about__tertiary spacer--in-top">
+  {% include './03_molecules/why.html.twig' %}
+</section>
+
+<section class="about__outro section--small spacer--in-top">
+    
+    {% embed './03_molecules/cta.html.twig' %}
+      {% block ctatitle %} Let us guide you through your Microsoft 365 journey {% endblock %}
+      {% block ctadesc %} Our goal is to help you work better together and optimize your workflow. {% endblock %}
+      {% block ctalabel %} Let's talk {% endblock %}
+      {% block ctalink %} /contact {% endblock %}  
+    {% endembed %}
+
+</section>
+
+{% endblock %}

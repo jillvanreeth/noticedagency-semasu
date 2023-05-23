@@ -1,0 +1,13 @@
+.sliderSwitch {
+	@include media('small') {
+		padding: 0 0 gap('xxlarge');
+	}
+}
+
+.sliderSwitch__cta {
+	display: block;
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('large') gap('large') 0;
+}

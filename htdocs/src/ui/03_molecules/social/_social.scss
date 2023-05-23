@@ -1,0 +1,21 @@
+.social__link {
+	padding-right: gap('xxsmall');
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+	
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.social__label {
+	transition: all .25s ease;
+	padding-bottom: 2px;
+	border-bottom: 1px solid;
+	opacity: .6;
+
+	&:hover {
+		opacity: 1;
+	}
+}

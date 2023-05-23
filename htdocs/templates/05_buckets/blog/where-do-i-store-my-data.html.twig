@@ -1,0 +1,146 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Where do I store my data{% endblock %}
+{% block ogtitle %}My company uses Microsoft 365, but where do I store my data?{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="blogDetail__hero">
+
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-blog-hero.jpg{% endblock %}
+            {% block herotitle %}My company uses Microsoft 365, but where do I store my data?{% endblock %}
+        {% endembed %}
+
+    </section>
+
+    <section class="blogDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Where do I store my data? {% endblock %}
+                {% block maincontentbody %}
+                    <p>You’re used to saving your data on your C-drive, or on a file share where you have a personal
+                        folder and some folders that your colleagues have access to. The structure is clear, and
+                        everybody uses it. There are a few drawbacks, though…</p>
+                    <ul>
+                        <li>You need to be on your laptop or PC to get to the documents stored on your C-drive</li>
+                        <li>You have to copy files to other locations if you want to share them</li>
+                        <li>You can’t see who has access to the files you store in the file share</li>
+                        <li>The structure is folder based and often disorganized</li>
+                        <li>Searching for the right document in these locations is a challenge</li>
+                    </ul>
+                    <p>You’re in luck because the new IT guy with a coffee cup in the shape of Darth Vader’s head and a
+                        “Hello world” tattoo on his arm knew an alternative solution. Congratulations, now you have
+                        Microsoft 365!
+                        We understand you must be thinking: “well, thank you very much, but uhmm, what now?”</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__tertiary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Personal documents {% endblock %}
+                {% block maincontentbody %}
+                    <p>Let’s start with personal documents that you create in a professional context. This means files
+                        that you are working on that aren’t ready to be published or shared with your team or the rest
+                        of the company. The best solution to store these files is <strong>OneDrive for
+                            Business.</strong></p>
+                    <p>OneDrive for Business is a safe personal location where you can easily store loads of files. Some
+                        of the additional perks that come with OneDrive for Business are:</p>
+                    <ul>
+                        <li>Because it’s cloud storage, you can access the documents form any device connected to the
+                            internet, anytime, everywhere.
+                        </li>
+                        <li>You can search for files by filtering on file properties or use the powerful search
+                            functionality and scan for keywords inside documents.
+                        </li>
+                        <li>OneDrive keeps the history of a document available thanks to “versioning”. If something went
+                            wrong, you can always recover an older version of the document.
+                        </li>
+                    </ul>
+                    <p>On top of these improvements to your previous way of handling personal documents, you can also
+                        easily share them. If you’re working on a draft for a new proposal and want to share it with a
+                        colleague for a review, you can easily do so in <strong>OneDrive for Business.</strong> In the
+                        interface, you can
+                        easily see what files have been shared and with whom.</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__tertiary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Team documents {% endblock %}
+                {% block maincontentbody %}
+                    <p>After the review with your colleague, the proposal is ready. You want to share it with your
+                        team.</p>
+                    <p>The typical applications for team collaboration in <strong>Microsoft 365 are SharePoint
+                            Online</strong> or
+                        <strong>Microsoft Teams.</strong> Your team will most likely have a location on either of these
+                        applications
+                        where team-related information is stored. In <strong>OneDrive for Business</strong>, you can
+                        easily move your
+                        document to these applications. Once they are in SharePoint Online or Teams, the members of that
+                        location can view them and collaborate on it if needed. The same features like versioning,
+                        search, etc. are part of these applications, so you will feel familiar when working with your
+                        document in its new location. </p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__tertiary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Published documents {% endblock %}
+                {% block maincontentbody %}
+                    <p>You also have a company intranet to broadcast information to the rest of the office? There's a
+                        chance that this is also a <strong>SharePoint Online intranet</strong>. Another option would be
+                        to use <strong>Yammer</strong> as
+                        a companywide communication and engagement platform.</p>
+                    <p>If your company uses SharePoint Online, the interface will be familiar. The way documents are
+                        stored is exactly the same as you have been doing in your team collaboration space. Moving data
+                        to a SharePoint Online intranet can be done in the same way you moved the document from OneDrive
+                        for Business to your team area.</p>
+                    <p>If Yammer is the target location for your published document, you can post your content directly
+                        to Yammer or link to the source documents stored in SharePoint.</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More news {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} semasu-blog-detail-2.jpg {% endblock %}
+                {% block readmorelink %} /blog {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Need guidance to a transparent approach for managing data in Microsoft 365? {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Get in touch {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<div class="testimony {{ bgColor }}">
+	<div class="testimony__inner">
+		
+		{% if block('testimonyviusaltop') is defined %}	
+			<div class="testimony__visual--top">
+				<div class="testimony__visual__sizer">
+					<div class="testimony__visual__inner">
+						<div class="testimony__visual__reset">
+							<img src="/dist/img/{{ block('testimonyviusaltop')|replace({' ': ''}) }}" alt="Testimony Visual">
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="testimony__quote {{ fcColor }}">
+			<p>{% block testimonyquote %} Quote {% endblock %}</p>
+		</div>
+		
+		{% if block('testimonyviusaltop') is defined %}	
+			<div class="testimony__visual--bottom">
+				<div class="testimony__visual__sizer">
+					<div class="testimony__visual__inner">
+						<div class="testimony__visual__reset">
+							<img src="/dist/img/{{ block('testimonyviusalbottom')|replace({' ': ''}) }}" alt="Testimony Visual Bottom">
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+
+	</div>
+</div>

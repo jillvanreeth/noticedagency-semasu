@@ -1,0 +1,36 @@
+.caseDetail__hero {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.caseDetail__primary {
+	position: relative;
+	z-index: 2;
+}
+
+.caseDetail__secondary {
+	@include media('small') {
+		padding-top: 0;
+	}
+
+	position: relative;
+	z-index: 1;
+	padding-top: gap('medium');
+	.draggslider__header {
+		@include media('small') {
+			text-align: center;
+		}
+	}
+}
+
+.caseDetail__tertiary {
+	position: relative;
+	z-index: 1;
+}
+
+.caseDetail__outro {
+	position: relative;
+	z-index: 1;
+}

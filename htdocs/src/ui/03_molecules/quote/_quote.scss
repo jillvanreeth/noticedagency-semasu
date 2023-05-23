@@ -1,0 +1,40 @@
+.quote {
+	display: block;
+	width: 100%;
+	
+}
+
+.quote__content {
+
+		@include media('medium') {
+font-size: titleSize('h2');
+		}
+	@include media('large') {
+		font-size: titleSize('h1');
+		text-align: left;
+	}
+
+	margin: 0;
+	padding: 0;
+	color: color('theme-4');
+	font-family: font('light');
+	font-size: fontSize('xxlarge');
+	line-height: 1.2;
+	text-align: center;
+}
+
+.quote__author {
+	@include media('medium') {
+		padding-top: gap('xsmall');
+		font-size: fontSize('small');
+	}
+
+	@include media('large') {
+	
+	}
+
+
+	padding-top: gap('xxsmall');
+	font-family: font('normal');
+	font-size: fontSize('xsmall');
+}

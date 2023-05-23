@@ -1,0 +1,55 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Home{% endblock %}
+{% block ogtitle %}Home{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+<section class="section home__hero">
+
+  {% embed './04_organisms/hero.html.twig' with { 'bgColor': 'bgc--theme-4', 'fcColor' : 'fc--light' } %}
+    {% block herotitle %} We make your work flow {% endblock %}
+    {% block herosubtitle %} We guide you through your Microsoft 365 journey {% endblock %}
+  {% endembed %}
+
+  {% include './03_molecules/intro.html.twig' %}
+  
+  {% include './02_atoms/flare/flare.html.twig' with {'animate' : true,'flareColor': 'theme-1'} %}
+
+</section>
+
+<section class="home__primary section--xlarge">
+  
+  {% include './03_molecules/clients.html.twig' %}
+
+</section>
+
+<section class="home__secondary spacer--in-top">
+  
+  <div class="section--xlarge">
+    {% include './03_molecules/solutions.html.twig' %}
+  </div>
+  
+  {% include './03_molecules/strategies.html.twig' %}
+ 
+</section>
+  
+<section class="home__tertiary">
+  
+  {% include './04_organisms/testimonies.html.twig' %}
+
+</section>    
+
+<section class="home__outro section--small spacer--in-top">
+    
+    {% embed './03_molecules/cta.html.twig' %}
+      {% block ctatitle %} A carefree journey through Microsoft 365? {% endblock %}
+      {% block ctadesc %} We aim to optimize your work process and maximize your achievements.  {% endblock %}
+      {% block ctalabel %} Let's talk {% endblock %}
+      {% block ctalink %} /contact {% endblock %}  
+    {% endembed %}
+
+</section>
+ 
+{% endblock %}

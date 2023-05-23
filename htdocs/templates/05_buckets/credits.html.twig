@@ -1,0 +1,84 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Credits{% endblock %}
+{% block ogtitle %}Credits{% endblock %}
+{% block colormode %}darkMode{% endblock %}
+
+{% block content %}
+
+    <section class="section credits__hero">
+
+        {% embed './04_organisms/hero.html.twig' with { 'fcColor' : 'fc--theme-2' } %}
+            {% block herotitle %} Credits {% endblock %}
+        {% endembed %}
+
+    </section>
+
+    <section class="section credits__primary">
+        <div class="credits__primary__item">
+
+            {% embed './04_organisms/sliderItemSwitch.html.twig'
+                with {
+                'symbolFill' : 'fill--theme-3',
+                'titleColor' : 'fc--theme-3',
+                'bodyColor' : 'fc--neutrals-2',
+                'barColor' : 'bgc--theme-4',
+            } %}
+                {% set slider = {
+                    accordeon: false,
+                    accordeonitems: true,
+                    slides: [
+                        {
+                            title: 'No long-term contract',
+                            body: 'Purchase one of our credit plans and get the right answer to any Microsoft 365 question you might have. No risk and no contract lock-ins. You have our word!',
+                            symbol: 'migrate',
+                        },
+                        {
+                            title: 'Our experts are yours',
+                            body: 'Our highly proficient and passionate "Semasuies" are at your service. Their sacred mission? Guiding you to a solution or even do it all for you. You decide, we act!',
+                            symbol: 'files',
+                        },
+                        {
+                            title: 'Straightforward communication',
+                            body: 'Phone, email, chat, smoke signals... OK, maybe no smoke signals, but all common channels are open for you to reach out to us in a jiffy. We are always there to help!',
+                            symbol: 'folder' ,
+                        },
+                    ]
+                } %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="credits__secondary">
+
+        {% include './04_organisms/creditplan.html.twig' %}
+
+        {% include './02_atoms/flare/flare.html.twig' with {'animate' : true,'flareColor': 'theme-1'} %}
+
+        {% include './02_atoms/rectangle.html.twig' with { 'bgColor' : 'bgc--theme-1' } %}
+
+    </section>
+
+    <section class="section--xlarge credits__tertiary">
+
+        <div class="credits__tertiary__inner">
+            <div class="credits__secondary__itemWrap">
+                <div class="credits__secondary__item">
+                    {% include './03_molecules/credittable.html.twig' %}
+                </div>
+            </div>
+
+            <div class="section--small credits__secondary__cta spacer--in-top">
+                {% embed './03_molecules/cta.html.twig' %}
+                    {% block ctatitle %} Want to see us in action? {% endblock %}
+                    {% block ctadesc %} Get in touch today, and we'll get to you in no time. {% endblock %}
+                    {% block ctalabel %} Get in touch {% endblock %}
+                    {% block ctalink %} /contact {% endblock %}
+                {% endembed %}
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

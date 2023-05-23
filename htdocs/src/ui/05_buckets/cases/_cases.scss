@@ -1,0 +1,35 @@
+.cases__hero {
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.cases__primary {
+	@include media('medium') {
+		margin-top: gap('xxlarge') + gap('medium');
+		padding-bottom: gap('xxlarge');
+	}
+	@include media('large') {
+		margin-top: -170px;
+		padding-top: 270px;    overflow-x: hidden;
+	}
+
+	margin-top: gap('xxlarge');
+	padding-bottom: gap('large');
+	overflow: visible;
+}
+
+.cases__primary__item {
+	@include media('medium') {
+		margin-top: - gap('large');
+	}
+	@include media('large') {
+		margin-top: 0;
+	}
+
+	margin-top: - gap('medium');
+}
+
+.cases__secondary {
+	position: relative;
+	overflow-x: hidden;
+}

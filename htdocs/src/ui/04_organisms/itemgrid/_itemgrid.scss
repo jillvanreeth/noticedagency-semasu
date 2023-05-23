@@ -1,0 +1,239 @@
+.itemgrid {
+	@include media('medium') {
+		margin-top: 0;
+	}
+	@include media('large') {
+		margin-top: 0;
+	}
+
+	width: 100%;
+	margin: 0 auto 0;
+}
+
+.itemgrid__inner {
+	@include media('small') {
+		transform: none;
+		margin: 0;
+		padding: 0 gap('large');
+	}
+	@include media('large') {
+		transform: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	padding: 0 gap('small');
+}
+
+.itemgrid__itemWrap {
+	@include media('small') {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	@include media('medium') {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	@include media('large') {
+		justify-content: flex-start;
+		flex-direction: row;
+		padding: 0;
+	}
+}
+
+.itemgrid__item {
+	@include media('medium') {
+		flex: 0 0 46%;
+		padding-top: 0;
+	}
+	@include media('large') {
+		position: relative;
+		display: flex;
+		flex: 0 0 100%;
+		flex-direction: column;
+		width: 100%;
+		margin: 0;
+		padding-top: 0;
+
+		align-self: flex-start;
+	}
+
+	display: block;
+	padding-top: gap('large');
+
+	&:last-child {
+		@include media('large') {
+			max-width: section('large') / 2;
+			padding: 0 gap('xlarge') 0 gap('large');
+		}
+	}
+
+	&:first-child {
+		@include media('large') {
+			flex: 0 0 50%;
+			width: 50%;
+			margin: 0 gap('small');
+			margin: 0;
+			padding: gap('medium') gap('large') 0 0;
+		}
+
+		padding-top: 0;
+	}
+}
+
+.itemgrid__item__inner {
+	display: block;
+	width: 98%;
+	background-color: green;
+}
+
+.itemgrid__visual {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+
+	img {
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 100%;
+		height: auto;
+
+		@include media('medium','min-width') {
+			min-width: 100%;
+    	min-height: 100%;	
+			width: auto;
+		}
+
+		@include media('large') {
+			min-width: auto;
+			min-height: auto;
+			width: 100%;
+		}
+	}
+}
+
+.itemgrid__visual__sizer {
+	@include media('medium') {
+		padding-top: 130%;
+	}
+	@include media('large') {
+		.itemgrid__item:first-child & {
+			padding-top: 60%;
+		}
+	}
+
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-top: 65%;
+}
+
+.itemgrid__visual__bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.itemgrid__readmore {
+	transition: transform 500ms ease-in-out;
+	transform: translateX(-100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(color('theme-4'), .7);
+
+	.itemgrid__item:hover & {
+		transform: translateX(0);
+	}
+}
+
+.itemgrid__readmore__inner {
+	display: flex;
+	align-items: center ;
+	padding: gap('xxsmall') gap('xsmall');
+}
+
+.itemgrid__readmore__label {
+	padding-right: gap('xxsmall');
+	color: color('light');
+	font-family: font('normal');
+	font-size: fontSize('small');
+}
+
+.itemgrid__readmore__symbol {
+	display: block;
+	width: 12px;
+	height: 12px;
+
+	svg g {
+		fill: color('light');
+	}
+}
+
+.itemgrid__content {
+	@include media('medium') {
+		padding-top: gap('xsmall');
+	}
+	@include media('large') {
+		padding-top: gap('small');
+
+		.itemgrid__item:first-child & {
+			max-width: section('xlarge') / 2;
+			padding-left: gap('xxxlarge');
+
+			align-self: flex-end;
+		}
+	}
+
+	display: block;
+	padding-top: gap('xxsmall');
+}
+
+.itemgrid__link {
+	@include media('medium') {
+		padding: 0;
+		font-size: fontSize('large');
+	}
+	@include media('large') {
+		padding-bottom: gap('xsmall');
+		font-size: fontSize('xlarge');
+	}
+
+	display: inline-block;
+	margin: 0;
+	padding-bottom: 5px;
+	color: inherit;
+	font-family: font('normal');
+	font-size: fontSize('xsmall');
+	text-decoration: none;
+	border-bottom: 1px solid color('neutrals-2');
+
+	.fc--light & {
+		border-bottom: 1px solid color('light');
+	}
+
+	.fc--neutrals-2 & {
+		border-bottom: 1px solid color('neutrals-2');
+	}
+}

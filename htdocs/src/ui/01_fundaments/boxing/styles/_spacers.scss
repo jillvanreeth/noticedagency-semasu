@@ -1,0 +1,89 @@
+/**
+ *
+ * BOXING: SPACERS
+ *
+ */
+
+.spacer--in {
+	@include media('medium') {
+		padding-top: gap('large');
+		padding-bottom: gap('large');
+	}
+	@include media('large') {
+		padding-top: gap('xlarge');
+		padding-bottom: gap('xlarge');
+	}
+
+	padding-top: gap('small');
+	padding-bottom: gap('small');
+}
+
+.spacer--in-top {
+	@include media('medium') {
+		padding-top: gap('xxxlarge');
+	}
+	@include media('large') {
+		padding-top: gap('xxxlarge');
+	}
+
+	padding-top: gap('large');
+}
+
+.spacer--in-bottom {
+	@include media('medium') {
+		padding-bottom: gap('large');
+	}
+	@include media('large') {
+		padding-bottom: gap('xlarge');
+	}
+
+	padding-bottom: gap('small');
+}
+
+.spacer--in-aside {
+	@include media('medium') {
+		padding-left: gap('large');
+		padding-right: gap('large');
+	}
+	@include media('large') {
+		padding-left: gap('xlarge');
+		padding-right: gap('xlarge');
+	}
+
+	padding-left: gap('small');
+	padding-right: gap('small');
+}
+
+.spacer--out {
+	@include media('medium') {
+		margin-top: gap('large');
+		margin-bottom: gap('large');
+	}
+	@include media('large') {
+		margin-top: gap('xlarge');
+		margin-bottom: gap('xlarge');
+	}
+
+	margin-top: gap('small');
+	margin-bottom: gap('small');
+}
+
+.spacer--out-top {
+	@include media('medium') {
+		margin-top: gap('xxxlarge');
+	}
+
+	margin-top: gap('xlarge');
+}
+
+
+.spacer--out-bottom {
+	@include media('medium') {
+		margin-bottom: gap('large');
+	}
+	@include media('large') {
+		margin-bottom: gap('xlarge');
+	}
+
+	margin-bottom: gap('small');
+}

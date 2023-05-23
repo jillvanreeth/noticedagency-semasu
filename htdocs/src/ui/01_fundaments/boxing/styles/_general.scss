@@ -1,0 +1,68 @@
+html {
+	height: 100%;
+}
+
+#theBody {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+//	overflow-x: hidden;
+	box-sizing: border-box;
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	&:before {
+		@include media('medium') {
+			content: 'medium';
+		}
+		@include media('large') {
+			content: 'large';
+		}
+		@include media('xlarge') {
+			content: 'xlarge';
+		}
+
+		position: absolute;
+		left: -90210px;
+		content: 'small';
+	}
+}
+
+#theBucket {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	//overflow-x: hidden;
+
+	//ios overflow fix
+	.overflow-is-hidden & {
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+.main {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	width: 100%;
+}
+
+.section {
+	position: relative;
+	overflow: hidden;
+}
+
+@each $sectionName, $sectionValue, $section in $sections {
+	.section--#{$sectionName} {
+		width: 100%;
+		max-width: #{$sectionValue};
+		margin: 0 auto;
+
+		align-self: center;
+	}
+}

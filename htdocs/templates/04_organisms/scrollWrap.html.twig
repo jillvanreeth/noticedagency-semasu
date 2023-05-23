@@ -1,0 +1,12 @@
+<div class="scrollWrap {{ bgColor }}">
+		
+	<div class="scrollWrap__inner">
+		{% embed './03_molecules/draggslider.html.twig' with { 'symbolFill' : symbolFill, 'titleColor' : titleColor, 'barColor' : barColor, 'bodyColor' : bodyColor, 'btnColor' : btnColor } %} 
+			{% 
+				set slider = slider
+			%}
+		{% endembed %}
+	</div>
+
+	
+</div>

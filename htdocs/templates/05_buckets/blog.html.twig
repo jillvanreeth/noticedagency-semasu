@@ -1,0 +1,81 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Blog{% endblock %}
+{% block ogtitle %}Blog{% endblock %}
+{% block colormode %}darkMode{% endblock %}
+
+{% block content %}
+
+<section class="section section--xlarge blog__hero">
+
+	{{ uri }}
+
+	{% embed './04_organisms/heroVisual.html.twig' %}
+		{% block herovisualsrc %}semasu-blog-upgrade-microsoft.jpg{% endblock %}
+		{% block herotitle %}Upgrade Microsoft 365 with cloud security{% endblock %}
+		{% block herolink %}/blog/upgrade-microsoft-365{% endblock %}
+	{% endembed %}	
+</section>
+
+<section class="blog__primary bgc--theme-0">
+	<div class="blog__primary__item">
+	{% embed './04_organisms/itemgrid.html.twig' with { 'fcColor' : 'fc--light' } %}
+		{% 
+        set items = {
+          item1: { 
+            label: 'Microsoft 365 offers a lot, but what options are valuable for me?',
+            link: '/blog/microsoft-365-offers-a-lot',
+            visual: 'semasu-blog-options.jpg',
+          },
+          item2: { 
+            label: 'My company uses Microsoft 365, but where do I store my data?',
+            link: '/blog/where-do-i-store-my-data',
+            visual: 'semasu-blog-data.jpeg',
+          },
+        }
+      %} 
+	{% endembed %}
+	</div>
+</section>
+
+<section class="section section--xlarge cases__secondary spacer--in-top">
+  {% embed './03_molecules/newsgallery.html.twig' %}	
+		{% 
+        set items = [
+          { 
+            label: 'Upgrade Microsoft 365 with cloud security',
+            link: '/blog/upgrade-microsoft-365',
+            visual: 'semasu-gallery-2.jpg',
+          },
+          { 
+            label: 'Microsoft 365 offers a lot, but what options are valuable for me?',
+            link: '/blog/microsoft-365-offers-a-lot',
+            visual: 'semasu-gallery-1.jpg',
+          },
+          { 
+            label: 'My company uses Microsoft 365, but where do I store my data?',
+            link: '/blog/where-do-i-store-my-data',
+            visual: 'semasu-gallery-3.jpg',
+          },
+        ]
+      %} 
+	{% endembed %}	
+
+</section>
+
+<section class="section blog__tertiary spacer--in-top">
+	
+	 <div class="section--small">
+	  {% embed './03_molecules/cta.html.twig' %}
+	    {% block ctatitle %} Let us guide you through your Microsoft 365 journey {% endblock %}
+	    {% block ctadesc %} Our goal is to help you work better together and optimize your work process. {% endblock %}
+	    {% block ctalabel %} Let's talk {% endblock %}
+	    {% block ctalink %} /contact {% endblock %}  
+	  {% endembed %}
+	</div>
+
+	{% include './02_atoms/rectangle.html.twig' with { 'bgColor' : 'bgc--theme-1' } %}	
+
+</section>
+
+{% endblock %}

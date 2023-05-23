@@ -1,0 +1,46 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	@include media('medium') {
+		line-height: 1.375;
+	}
+
+	font-family: font('normal');
+	font-size: fontSize('small');
+	font-weight: inherit;
+	line-height: 1.415;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		margin: 0;
+		padding: 0;
+		font-weight: inherit;
+		line-height: 1.65;
+	}
+}
+
+strong {
+	font-family: font('bold');
+}
+
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+.screenReader {
+	position: absolute;
+	left: -90210px;
+}

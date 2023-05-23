@@ -1,0 +1,152 @@
+// PATHS
+
+// .brand__path--s-top
+// .brand__path--e
+// .brand__path--m
+// .brand__path--a
+// .brand__path--s-bottom
+// .brand__path--u
+
+.brand {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	transition: opacity 1000ms ease;
+
+	svg g {
+		fill: color('light');
+	}
+
+	.headerBrand-is-fading & {
+		opacity: 1;
+	}
+}
+
+.brand__path--s-top {
+
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease;
+		transform: translate(25%, -52px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transform: translate(0,0);
+		transition: transform 300ms ease 500ms;
+	}
+}
+
+.brand__path--dash-1 {
+	transform-origin: center;
+	
+	.headerBrand-is-animating-in & {
+		transition: all 300ms ease 50ms;
+		transform: rotateY(180deg);
+		
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: all 300ms ease 450ms;
+		transform: rotateY(0);
+	}
+}
+
+.brand__path--e {
+
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease 100ms;
+		transform: translate(25%, 54px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: transform 300ms ease 400ms;
+		transform: translate(0,0);
+	}
+}
+
+
+.brand__path--m {
+
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease 200ms;
+		transform: translate(-25%,-54px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: transform 300ms ease 300ms;
+		transform: translate(0,0);
+	}
+}
+
+.brand__path--dash-2 {
+		transform-origin: center;	
+	.headerBrand-is-animating-in & {
+		transition: all 250ms ease 250ms;
+		transform: rotateY(-180deg);
+	
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: all 250ms ease 250ms;
+				transform: rotateY(0);
+	}
+}
+
+
+.brand__path--a {
+	
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease 300ms;
+		transform: translate(-25%,54px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: transform 300ms ease 300ms;
+		transform: translate(0,0);
+	}
+}
+
+.brand__path--s-bottom {
+	
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease 400ms;
+		transform: translate(25%, -52px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: transform 300ms ease 200ms;
+		transform: translate(0,0);
+	}
+}
+
+.brand__path--dash-3 {
+		transform-origin: center;
+	.headerBrand-is-animating-in & {
+		transition: all 300ms ease 450ms;
+		transform: rotateY(180deg);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: all 300ms ease 50ms;
+				transform: rotateY(0);
+	}
+}
+
+.brand__path--u {
+
+	.headerBrand-is-animating-in & {
+		transition: transform 300ms ease 500ms;
+		transform: translate(25%, 54px);
+	}
+
+	.headerBrand-is-animating-out & {
+		transition: transform 300ms ease;
+		transform: translate(0,0);
+	}
+}
+
+
+
+
+

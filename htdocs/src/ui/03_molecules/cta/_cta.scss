@@ -1,0 +1,24 @@
+.cta {
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.cta__inner {
+	padding: 0 gap('small');
+	color: color('theme-4');
+}
+
+.cta__title {
+	font-family: font('bold');
+}
+
+.cta__content {
+	padding-top: gap('xsmall');
+}
+
+.cta__theCta {
+	display: block;
+	padding-top: gap('medium');
+}

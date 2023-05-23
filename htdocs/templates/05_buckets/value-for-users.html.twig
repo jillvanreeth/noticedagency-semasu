@@ -1,0 +1,152 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Value for users{% endblock %}
+{% block ogtitle %}Value for users{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="users__hero">
+
+        {% embed './04_organisms/hero.html.twig' with { 'variant' : 'hero--center', 'fcColor' : 'fc--light', 'bgColor' : 'bgc--theme-5' } %}
+            {% block herotitle %} Ask us anything {% endblock %}
+            {% block herosubtitle %} Value for users  {% endblock %}
+        {% endembed %}
+
+
+        <div class="section--xlarge users__intro">
+            {% include './04_organisms/usersIntro.html.twig' %}
+        </div>
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}
+    </section>
+
+    <section class="users__primary spacer--in-top accordeon">
+
+        <header class="users__primary__header">
+            <h5 class="users__primary__title">Our users solutions:</h5>
+        </header>
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--neutrals-2',
+            'bgColor' : 'bgc--theme-4-lighter',
+            'btnColor' : 'btn--theme-2',
+            'barColor' : 'bgc--theme-4',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Document management & sharing solution',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides:
+                [
+                    {
+                        title: 'Share with your team',
+                        body: 'Securely share data such as documents, meetings and chats with other users. Share with an individual, a project group, a department, or your entire organization!',
+                        symbol: 'share',
+                    },
+                    {
+                        title: 'All files located in one place, accessible from anywhere.',
+                        body: 'No more mail attachments or renaming files to manage versions, run a smooth operation by bringing your documents together in one central location. And the best part? Always have the single version of the truth at the touch of a button, anywhere!',
+                        symbol: 'team',
+                    },
+                    {
+                        title: 'No more cluttered folders or disorganized file structures',
+                        body: 'Make the chaotic reality of cluttered and uncluttered documents mixed together something of the past. Using folders, metadata, views, columns and search not only results in flexibility, it’s completely customizable to your needs. After all, we are all different.',
+                        symbol: 'migrate' ,
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--light',
+            'titleColor' : 'fc--light',
+            'bodyColor' : 'fc--light',
+            'bgColor' : 'bgc--theme-5',
+            'btnColor' : 'btn--light',
+            'btnStyle' : 'button--ghost',
+            'barColor' : 'bgc--light',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Work better together',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides: [
+                    {
+                        title: 'Share information within our department and external partners',
+                        body: 'Sharing information on the work floor or with external business users is quick and simple, but ensuring the security is easy to understand for years to come can be challenging. A magician never shares his tricks, but we’re happy to show you how simple life in the digital world can be.',
+                        symbol: 'collaborate',
+                    },
+                    {
+                        title: 'We want to work together on a project',
+                        body: 'Stakeholders documents, reports, project information, tasks, risk logs, issue & decision lists, … you will have it all in one spot, accessible from anywhere and any device. Sounds too good to be true, right? ',
+                        symbol: 'chat',
+                    },
+                    {
+                        title: 'Sharing video content on our intranet',
+                        body: 'Videos can be challenging to stream without weighing down on the quality of your connection. And you prefer to keep your content inhouse. We offer several solutions to ensure smooth video sharing within your organization while leaving room for interaction. Ask us, and we’ll help to find the best approach for your business.',
+                        symbol: 'calendar' ,
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-2',
+            'titleColor' : 'fc--theme-2',
+            'bodyColor' : 'fc--neutrals-2',
+            'bgColor' : 'bgc--theme-2-lighter',
+            'btnColor' : 'btn--theme-2',
+            'btnStyle' : 'button--ghost',
+            'barColor' : 'bgc--theme-2',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Productivity',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides: [
+                    {
+                        title: 'Plan and organize your tasks and projects ',
+                        body: 'Take the lead and assign tasks, track your progress, plan and report! Need to share a document or chat with your peers while doing so? We help you to establish your focus areas.',
+                        symbol: 'smartphone',
+                    },
+                    {
+                        title: 'We want to capture business users’ questions on organizational changes.',
+                        body: 'The digital world has changed the way we communicate forever; online platforms allow us to share, collaborate and interact instantly. We offer you the right tools to answer, channel and guide live Q&A sessions. A great way to close the gap between business partners and business users.',
+                        symbol: 'team',
+                    },
+                    {
+                        title: 'Can we automate document approvals and requests?',
+                        body: 'Sending a document to third parties for approval, requesting time off through mail, or asking your manager’s consent to travel should be automated. It’s easy, and we help your organization to save time. You’re welcome!',
+                        symbol: 'migrate' ,
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+    </section>
+
+    <section class="users__outro section--xlarge spacer--in-top">
+
+        {% embed './03_molecules/cta.html.twig' %}
+            {% block ctatitle %} Are you convinced yet to book your Microsoft 365 journey with us? {% endblock %}
+            {% block ctadesc %} Our goal is to help you optimize your workflow and achieve more in less time. {% endblock %}
+            {% block ctalabel %} Let's talk {% endblock %}
+            {% block ctalink %} /contact {% endblock %}
+        {% endembed %}
+
+    </section>
+
+{% endblock %}

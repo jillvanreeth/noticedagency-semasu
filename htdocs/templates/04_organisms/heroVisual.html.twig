@@ -1,0 +1,17 @@
+<div class="heroVisual">
+	
+	<a href="{% block herolink %}Hero link{% endblock %}" class="heroVisual__visual">
+		<div class="heroVisual__content">
+			<h3 class="heroVisual__title">{% block herotitle %}Hero title{% endblock %}</h3>
+		</div>
+
+		<div class="heroVisual__visual__sizer">
+			<div class="heroVisual__visual__inner">	
+				<div class="heroVisual__visual__reset">
+					<img src="../dist/img/{{ block('herovisualsrc')|trim }}" alt="Header Visual">
+				</div>
+			</div>
+		</div>
+	</a>
+
+</div>

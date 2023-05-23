@@ -1,0 +1,67 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Cases{% endblock %}
+{% block ogtitle %}Cases{% endblock %}
+{% block colormode %}darkMode{% endblock %}
+
+{% block content %}
+
+    <section class="section section--xlarge cases__hero">
+        {% embed './04_organisms/heroVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-case-streamlining.jpeg{% endblock %}
+            {% block herotitle %} Streamlining collaboration: from bid to maintenance and everything in between {% endblock %}
+            {% block herolink %} cases/streamlining-collaboration {% endblock %}
+        {% endembed %}
+    </section>
+
+
+    <section class="section cases__primary bgc--theme-1">
+        <div class="cases__primary__item">
+            {% embed './04_organisms/itemgrid.html.twig' with { 'fcColor' : 'fc--neutrals-2' } %}
+                {% set items = {
+                    item1: {
+                        label: 'An engaging platform for your Digital department',
+                        link: 'cases/digital-enabler',
+                        visual: 'semasu-case-digital-enabler.jpeg',
+                    },
+                    item2: {
+                        label: '"Ask us anything", a complete support service for Microsoft 365.',
+                        link: 'cases/ask-us-anything',
+                        visual: 'semasu-case-ask-us-anything.jpeg',
+                    },
+                } %}
+            {% endembed %}
+        </div>
+    </section>
+
+    <section class="cases__secondary spacer--in-top">
+        <div class="section--small">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Let us guide you through your Microsoft 365 journey {% endblock %}
+                {% block ctadesc %} Our goal is to help you work better together and optimize your work process. {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+
+        <div class="cases__tertiary spacer--in-top">
+
+            {% embed './04_organisms/itemgrid.html.twig'  with { 'fcColor' : 'fc--neutrals-2' } %}
+                {% set items = {
+                    item1: {
+                        label: 'From many intranets to one central hub for information and collaboration',
+                        link: 'cases/one-global-intranet',
+                        visual: 'semasu-case-one-global-intranet.jpeg',
+                    },
+                    item2: {
+                        label: 'Save money by managing patents in SharePoint',
+                        link: 'cases/managing-patents-in-sharepoint',
+                        visual: 'semasu-case-sharepoints.jpeg',
+                    },
+                } %}
+            {% endembed %}
+        </div>
+    </section>
+
+{% endblock %}

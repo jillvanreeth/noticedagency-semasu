@@ -1,0 +1,22 @@
+<div class="newsgallery">
+
+
+
+    <div class="newsgallery__inner">
+        {% for item in items %}
+            {% set page = ((loop.index) / 4)|round(0, 'floor')%}
+
+            <div class="newsgallery__item">
+                <a href="{{ item.link|trim }}" class="newsgallery__item__inner">
+
+                    <div class="newsgallery__content">
+                        <span class="newsgallery__link">{{ item.label }}</span>
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>

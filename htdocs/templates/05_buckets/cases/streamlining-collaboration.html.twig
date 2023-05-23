@@ -1,0 +1,82 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %} Streamlining collaboration {% endblock %}
+{% block ogtitle %} Streamlining collaboration: from bid to maintenance and everything in between{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="caseDetail__hero">
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-cases-bg.jpg{% endblock %}
+            {% block herotitle %} Streamlining collaboration: from bid to maintenance and everything in between {% endblock %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' }%}
+                {% block maincontenttitle %} The Collaboration Challenge {% endblock %}
+                {% block maincontentclient %} {% endblock %}
+                {% block maincontentintro %}
+                    <p>Working for many government institutions, a technology provider for mission-critical environments, needs to follow strict procedures and processes daily. While in the bidding phase for a new government proposal, a running project or an existing customer in maintenance mode, following rules and regulations such as GDPR, security, ISO, customer procedures, and processes, are always critical.</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <p>Opportunities are moved manually through different phases and teams. From opportunity to pre-sales to project and eventually into maintenance mode. Files and folders are copied across, duplicates created, and security adapted accordingly.</p>
+                    <p>To be more efficient, be compliant, have fewer human mistakes, and faster interactions across the teams, a streamlined solution was required.</p>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="caseDetail__secondary bgc--light">
+        {% embed './04_organisms/scrollWrap.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--theme-4',
+            'barColor' : 'bgc--theme-4',
+        }
+        %}
+            {%
+                set slider = {
+                accordeon: false,
+                slidertitle: 'Our plan of action',
+                sliderintro: "After interviewing all the key stakeholders in the company, analyzing the data, understanding the process throughout, Semasu started to devise a solution.
+                              \n First, we built a proof-of-concept to make sure all involved parties knew the direction we were heading to, and to be able to adjust the system, based on feedback, and streamline the solution.
+                              \n Semasu decided to position SharePoint Online, enhancing our entire internal process from bid to maintenance. They provided a custom code solution to render customer portals and customer projects. By keeping our customer's desires in mind, Semasu's solution has helped us to channel and structure our +200 opportunities per year.
+                              \n While formulating the solution, using our flexible methodology, the customer was able to keep providing feedback, input, and tweaking until we achieved the desired outcome.",
+                slides: [
+                    {
+                        body: 'A central overview page is the entry point for all customers, projects and creating new opportunities.',
+                    },
+                    {
+                        body: 'Every customer exists out of customer details, current projects, and their status, classified in one of the main phases: pre-sales, project, and maintenance. ',
+                    },
+                    {
+                        body: 'Maintenance content is centrally available, which allows supporting teams to find the data needed to help their customers 24/7 effortlessly. ',
+                    },
+                    {
+                        body: 'To rapidly create new customers or opportunities, a site provision is available, which will generate all required components, the correct security, and all the information required to get started.',
+                    },
+                ]
+            }
+            %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__outro bgc--light">
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} {% endblock %}
+                {% block ctadesc %} {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+
+{% endblock %}

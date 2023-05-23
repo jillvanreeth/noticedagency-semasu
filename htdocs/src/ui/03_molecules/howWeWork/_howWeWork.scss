@@ -1,0 +1,116 @@
+.howWeWork {
+	@include media('small') {
+		padding: gap('xxlarge') 0;
+	}
+	@include media('large') {
+		padding: gap('xxxlarge') 0;
+	}
+
+	display: block;
+	padding: gap('large') 0;
+}
+
+.howWeWork__inner {
+	@include media('small') {
+		padding: 0 gap('large');
+	}
+
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: 0 gap('small');
+}
+
+.howWeWork__header {
+	@include media('small') {
+		max-width: 50%;
+	}
+	@include media('large') {
+		max-width: 30%;
+	}
+
+	max-width: 75%;
+}
+
+.howWeWork__title {
+	color: color('theme-4');
+	font-family: font('bold');
+}
+
+.howWeWork__subtitle {
+	@include media('medium') {
+		font-size: titleSize('h2');
+	}
+	@include media('large') {
+		padding-top: gap('xsmall');
+	}
+
+	display: block;
+	padding-top: gap('xxsmall');
+	color: color('light');
+	font-family: font('light');
+	font-size: fontSize('xxlarge');
+	line-height: 1.325;
+}
+
+.howWeWork__content {
+	@include media('medium') {
+		padding: gap('large') 0 0 gap('xxxlarge');
+	}
+	@include media('large') {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		padding: 0;
+	}
+
+	padding: gap('medium') 0 0 gap('small');
+}
+
+.howWeWork__theBody {
+	@include media('large') {
+		flex: 0 1 40%;
+		font-size: fontSize('small');
+	}
+
+	color: color('neutrals-2');
+	font-size: fontSize('xsmall');
+}
+
+.howWeWork__intro {
+	@include media('large') {
+		font-size: fontSize('xlarge');
+	}
+
+	padding-bottom: gap('xsmall');
+	font-size: fontSize('small');
+}
+
+.howWeWork__symbolWrap {
+	@include media('medium') {
+		display: flex;
+		padding-top: gap('xlarge');
+	}
+	@include media('large') {
+		flex: 1 0 45%;
+
+		align-self: flex-end;
+	}
+
+	display: none;
+}
+
+.howWeWork__symbol {
+	@include media('large') {
+		width: 150px;
+		height: 150px;
+	}
+
+	width: 112px;
+	height: 112px;
+	margin-right: gap('small');
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

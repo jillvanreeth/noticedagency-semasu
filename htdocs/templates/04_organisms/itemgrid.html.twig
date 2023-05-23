@@ -1,0 +1,48 @@
+<div class="itemgrid {{ bgColor }}">
+    <div class="itemgrid__inner">
+
+        <div class="itemgrid__itemWrap">
+
+            <a href="{{ items.item1.link }}" class="itemgrid__item {{ fcColor }}">
+                <div class="itemgrid__visual">
+                    <div class="itemgrid__visual__sizer">
+                        <div class="itemgrid__visual__bg" style="background-image: url(../dist/img/{{ items.item1.visual }})"></div>
+
+                        <div class="itemgrid__readmore">
+                            <div class="itemgrid__readmore__inner">
+                                <span class="itemgrid__readmore__label">Read more</span>
+                                <span class="itemgrid__readmore__symbol">{% include './02_atoms/symbols/arrow--up-right.html.twig' %}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemgrid__content">
+                    <span class="itemgrid__link">{{ items.item1.label }}</span>
+                </div>
+            </a>
+
+            <a href="{{ items.item2.link }}" class="itemgrid__item {{ fcColor }}">
+                <div class="itemgrid__visual">
+                    <div class="itemgrid__visual__sizer">
+                        <div class="itemgrid__visual__bg" style="background-image: url(../dist/img/{{ items.item2.visual }})"></div>
+
+                        <div class="itemgrid__readmore">
+                            <div class="itemgrid__readmore__inner">
+                                <span class="itemgrid__readmore__label">Read more</span>
+                                <span class="itemgrid__readmore__symbol">{% include './02_atoms/symbols/arrow--up-right.html.twig' %}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemgrid__content">
+                    <span class="itemgrid__link">{{ items.item2.label }}</span>
+                </div>
+            </a>
+
+        </div>
+
+
+    </div>
+</div>

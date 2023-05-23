@@ -1,0 +1,118 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Ask us anything{% endblock %}
+{% block ogtitle %}"Ask us anything". A complete support service for Microsoft 365.{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="caseDetail__hero">
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-cases-bg.jpg{% endblock %}
+            {% block herotitle %}"Ask us anything". A complete support service for Microsoft 365.{% endblock %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' }%}
+                {% block maincontenttitle %} All-in on support for Microsoft 365 {% endblock %}
+                {% block maincontentclient %}  {% endblock %}
+                {% block maincontentintro %}
+                    <p>The implementation of a Microsoft 365 Support Service for 15.000 users was a key step to maximize user adoption. An easy to reach service desk with expert Support Agents, ready to answer any question coming their way.</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <p>The Microsoft 365 service covers all types of questions, with a strong focus on:</p>
+                    <ul>
+                        <li>End-user support and advice</li>
+                        <li>Technical support for IT</li>
+                        <li>Platform health monitoring</li>
+                        <li>Service request catalog </li>
+                        <li>Knowledge management</li>
+                        <li>Continuous service improvements</li>
+                    </ul>
+                    <p>An essential aspect for any service desk is making sure application users always have an expert to help out if needed. We positioned our service desk at the end-user level, speeding up the process of questions and incidents. A fast and effective resolution is critical for queries such as:</p>
+                    <ul>
+                        <li>Adding users to a site</li>
+                        <li>Creating a new list with a specific configuration</li>
+                        <li>Helping out on how and where to store information</li>
+                        <li>Fixing login issues</li>
+                        <li>Etc.</li>
+                    </ul>
+                    <p>We analyze all the questions we receive to boost our continuous service improvements by creating knowledge articles, instruction videos, and adjusting processes. Also, we reduce recurring tickets and increase the overall Microsoft 365 competences of our customer's users. You're welcome!</p>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="caseDetail__secondary bgc--light">
+        {% embed './04_organisms/scrollWrap.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--theme-4',
+            'barColor' : 'bgc--theme-4',
+        }
+        %}
+            {%
+                set slider = {
+                accordeon: false,
+                slidertitle: 'Our plan of action',
+                slides: [
+                    {
+                        body: 'First, we get our head around the IT landscape we have to service. Once the scope is clear, we implement the support tools and start focusing on helping out. We got you covered!',
+                    },
+                    {
+                        body: 'From user advice questions to technical bug fixing for incidents, our expert service agents are ready to overcome any challenges coming their way!',
+                    },
+                    {
+                        body: 'Analyzing tickets offers opportunities to improve our service. Identifying recurring questions and creating knowledge items increases the user maturity without stressing the service.',
+                    },
+                ]
+            }
+            %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__secondary bgc--light spacer--in-top">
+
+        {% embed './03_molecules/testimony.html.twig'
+            with {
+            'bgColor' : 'bgc--theme-5',
+            'fcColor' : 'fc--light',
+        }
+        %}
+            {% block testimonyviusaltop %} semasu-case-quote-1.jpg {% endblock %}
+            {% block testimonyquote %} "A low threshold expert Microsoft 365 support service answering any question, continuously analyzing and improving, is an important boost for user adoption." {% endblock %}
+            {% block testimonyviusalbottom %} semasu-case-quote-2.jpg {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}
+
+    </section>
+
+    <section class="caseDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More cases {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} casesitem-6steps.jpg {% endblock %}
+                {% block readmorelink %} /cases {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Looking for a similar solution for your company? {% endblock %}
+                {% block ctadesc %} From end-user support to expert IT services for Microsoft 365. From service request to change management. We got your back! {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+
+{% endblock %}

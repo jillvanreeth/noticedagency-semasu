@@ -1,0 +1,129 @@
+.testimony {
+	position: relative;
+	overflow: hidden;
+}
+
+.testimony__inner {
+	@include media('small') {
+		display: flex;
+		flex-direction: column;
+		padding: 0 gap('large');
+	}
+	@include media('large') {
+		padding: 0 gap('xxlarge');
+	}
+
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+}
+
+.testimony__quote {
+	@include media('small') {
+		padding: gap('xxxlarge') 0;
+		font-size: titleSize('h2');
+		line-height: 1.2;
+	}
+	@include media('large') {
+		padding: gap('xxxlarge') gap('xlarge');
+		font-size: titleSize('h1');
+	}
+
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: gap('xlarge') gap('small');
+	font-family: font('light');
+	font-size: titleSize('h4');
+	line-height: 1.3;
+	text-align: center;
+}
+
+.testimony__visual--top {
+	@include media('small') {
+		display: block;
+		width: 50%;
+
+		align-self: flex-end;
+	}
+	@include media('large') {
+		width: 40%;
+		margin-bottom: -250px;
+	}
+
+	position: relative;
+	display: none;
+	margin-bottom: -280px;
+	overflow: hidden;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.testimony__visual--bottom {
+	@include media('small') {
+		display: block;
+		width: 50%;
+		margin-top: - gap('xlarge');
+		overflow: hidden;
+
+		align-self: flex-start;
+	}
+	@include media('large') {
+		width: 40%;
+		margin-top: - gap('medium');
+	}
+
+	position: relative;
+	display: none;
+	overflow: hidden;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.testimony__visual__sizer {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 0;
+
+	.testimony__visual--top & {
+		@include media('small') {
+			padding-top: 120%;
+		}
+		@include media('large') {
+			padding-top: 120%;
+		}
+	}
+
+	.testimony__visual--bottom & {
+		@include media('small') {
+			padding-top: 65%;
+		}
+		@include media('large') {
+			padding-top: 40%;;
+		}
+	}
+}
+
+.testimony__visual__inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.testimony__visual__reset {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}

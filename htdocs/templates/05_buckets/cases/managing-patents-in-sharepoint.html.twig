@@ -1,0 +1,105 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Managing patents in Sharepoint{% endblock %}
+{% block ogtitle %}Saving money by managing patents in SharePoint{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="caseDetail__hero">
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-cases-bg.jpg{% endblock %}
+            {% block herotitle %}Saving money by managing patents in SharePoint{% endblock %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' } %}
+                {% block maincontenttitle %} From expensive online service to a self-managed SharePoint solution {% endblock %}
+                {% block maincontentclient %} Alto advocaten {% endblock %}
+                {% block maincontentintro %}
+                    <p>A large chemical company was managing its patents using an online platform run by a third-party
+                        provider. We proposed to build a patent management system in SharePoint, saving big on license
+                        costs and adding flexibility.</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <p>The license cost for the online service was high, complaints of users about a lack of flexibility
+                        and missing reporting functionalities were a few reasons to look for alternative solutions. When
+                        we analyzed the requirements of the patent team, we've noticed that the core of the
+                        functionality would be document management.</p>
+                    <p>We were able to cover all the needs using the standard functionalities of SharePoint.
+                        Additionally, we made sure some helpful reports could be executed, like a list of all patents
+                        that needed renewals within the next three months.</p>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="caseDetail__secondary bgc--light">
+        {% embed './04_organisms/scrollWrap.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--theme-4',
+            'barColor' : 'bgc--theme-4',
+        } %}
+            {% set slider = {
+                accordeon: false,
+                slidertitle: 'Our plan of action',
+                slides: [
+                    {
+                        body: "A deep-dive analysis of the needs brought clarity on the expectations. We've reached an agreement on the functional description of the solution. The advantages of the external application were significant. The result?  Everyone involved decided to go for it.",
+                    },
+                    {
+                        body: "While configuring the application, we remained in close contact with the patent team. And the patent team was an active partner while building the SharePoint application, having to test, verify and approve the functionality. Along the way, we've tweaked some minor issues, always aiming for the best results!",
+                    },
+                    {
+                        body: "The patent team were eager to get started! And because the patent team was closely involved throughout the process, the handover was only a small hurdle to take. We've migrated all the data from the old platform into the new solution.",
+                    },
+                ]
+            } %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__secondary bgc--light spacer--in-top">
+
+        {% embed './03_molecules/testimony.html.twig'
+            with {
+            'bgColor' : 'bgc--theme-5',
+            'fcColor' : 'fc--light',
+        } %}
+            {% block testimonyviusaltop %} semasu-case-quote-1.jpg {% endblock %}
+            {% block testimonyquote %} "The new Patent solution tool is easy to use and allows us to report to our business and patent holders. The results are obvious: no more expensive licenses and higher flexibility." {% endblock %}
+            {% block testimonyviusalbottom %} semasu-case-quote-2.jpg {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}
+
+    </section>
+
+    <section class="caseDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More cases {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} casesitem-6steps.jpg {% endblock %}
+                {% block readmorelink %} /cases {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Looking for a simular solution for your company? {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+
+{% endblock %}

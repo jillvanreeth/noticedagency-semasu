@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^semasu.test$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^semasu.be$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.semasu.test$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.semasu.be$
+RewriteRule (.*) /htdocs/$1 [L]

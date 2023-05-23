@@ -1,0 +1,140 @@
+.testimonies {
+	@include media('small') {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 gap('small');
+	}
+	@include media('large') {
+		flex-direction: row;
+		padding: 0;
+	}
+
+	display: none;
+}
+
+.testimonies__visual {
+	@include media('large') {
+		flex: 0 0 50%;
+		width: 50%;
+		margin: 0;
+	}
+
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.testimonies__visual__bg {
+	@include media('large') {
+		height: 530px;
+	}
+
+	position: relative;
+	height: 380px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 100%;
+		background-color: color('dark');
+
+		opacity: 0.3;
+
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.testimonies__cta {
+	@include media('large') {
+		display: block;
+	}
+
+	z-index: 1;
+	position: absolute;
+	right: gap('small');
+	bottom: gap('small');
+	display: none;
+	color: color('light');
+	text-transform: lowercase;
+
+	& > * {
+		transition: all .35s ease;
+
+		&:hover {
+			color: color('theme-4');
+			border-color: color('light');
+			background-color: color('light');
+		}
+	}
+}
+
+.testimonies__inner {
+	@include media('large') {
+		flex-direction: row;
+		max-width: section('xlarge') / 2;
+		padding: 0 gap('small') 0 gap('xlarge');
+	}
+
+	display: flex;
+	width: 100%;
+	padding-top: gap('medium');
+}
+
+.testimonies__content {
+	width: 100%;
+}
+
+.testimonies__title {
+	color: color('theme-4');
+}
+
+.testimonies__itemWrap {
+	padding-top: gap('medium');
+}
+
+
+.testimonies__item {
+	display: block;
+	padding: gap('small') 0 gap('xsmall');
+	border-bottom: 1px solid color('neutrals-1');
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.testimonies__item__inner {
+	text-decoration: none;
+}
+
+.testimonies__item__title {
+	padding-top: gap('xsmall');
+	color: color('neutrals-1');
+
+	.testimonies__item__inner:hover & {
+		color: color('neutrals-2','darker');
+	}
+}
+
+.testimonies__item__label {
+	padding-bottom: 2px;
+	color: color('theme-4');
+	text-decoration: none;
+	border-bottom: 1px solid color('theme-4');
+
+	.testimonies__item__inner:hover & {
+		color: darken(color('theme-4'), 7);
+	}
+}

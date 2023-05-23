@@ -1,0 +1,152 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Solutions for business partners{% endblock %}
+{% block ogtitle %}Solutions for business partners{% endblock %}
+{% block colormode %}darkMode{% endblock %}
+
+{% block content %}
+
+    <section class="section business__hero">
+
+        {% embed './04_organisms/hero.html.twig' with { 'variant' : 'hero--center', 'fcColor' : 'fc--theme-3' } %}
+            {% block herotitle %} Business alignment {% endblock %}
+            {% block herosubtitle %} Solutions for business partners {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+    <section class="section--xlarge business__intro">
+
+        {% include './04_organisms/businessIntro.html.twig' %}
+
+    </section>
+
+    <section class="business__primary spacer--in-top accordeon">
+
+        <header class="business__primary__header">
+            <h5 class="business__primary__title">Our business solutions:</h5>
+        </header>
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-2',
+            'titleColor' : 'fc--theme-2',
+            'bodyColor' : 'fc--neutrals-2',
+            'bgColor' : 'bgc--theme-2-lighter',
+            'btnColor' : 'btn--theme-3',
+            'barColor' : 'bgc--theme-2',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Introducing applications',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides:
+                [
+                    {
+                        title: 'We want to start using Teams but avoid chaos and wild grow',
+                        body: 'Introducing tools like Teams can be a bit overwhelming and quickly lead to an overload of irrelevant information. We propose a structured but flexible approach that is easy to understand and manageable for IT. The combination of guidance, training and support will ensure adoption and boost sharing and collaborating.',
+                        symbol: 'files',
+                    },
+                    {
+                        title: 'We want to encourage dialogue, where do we start?',
+                        body: 'Microsoft 365 offers various communication and collaboration tools. Sometimes it might feel that some tools have overlapping functionalities. Semasu will analyze your needs, scan your company communication and collaboration maturity, then recommend the right tools for you. And even though we’re not fortunetellers, we’ll provide you with a roadmap for the years to come.',
+                        symbol: 'team',
+                    },
+                    {
+                        title: 'We have Microsoft 365, but only use Outlook. Which application is right for our business?',
+                        body: 'Listening to key people from HR, Communications, Security and Digital Workplace, will very quickly provide us with insights to recommend the fast wins that can be achieved with Microsoft 365, with minimum effort and low cost.',
+                        symbol: 'files',
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--light',
+            'titleColor' : 'fc--light',
+            'bodyColor' : 'fc--light',
+            'bgColor' : 'bgc--theme-0',
+            'btnColor' : 'btn--light',
+            'btnStyle' : 'button--ghost',
+            'barColor' : 'bgc--light',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Work better, together',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides: [
+                    {
+                        title: 'We want to build our own intranet',
+                        body: 'We help you establish the intranet that fits your needs. Analyzing your business, interviewing key stakeholders and capturing goals are the foundation for us to design the intranet that is right for you. We guide you through the complete process, try to be flexible and adapt, making sure you are familiar with the solutions we offer.',
+                        symbol: 'chat',
+                    },
+                    {
+                        title: 'We want to move our collaboration documents away from the file server',
+                        body: "Semasu has both in-house knowledge and the right tools to assist you in migrations from the file server to Microsoft 365. Besides the technical migration, we establish an information strategy, help to structure your business' content and data, advice on what should go where, and provide the best practices and do's and don'ts. Migration is so much more than moving data; it's a way to start smart!",
+                        symbol: 'migrate',
+                    },
+                    {
+                        title: 'We want to automate our contract management process in our department',
+                        body: 'Building specific solutions? Challenge accepted! To be cost-efficient and secure long-term benefits, we strive to use out-of-the-box Microsoft 365 components to reach your goals. Workarounds, training and process optimization are our preferred choice before starting to use custom code solutions.',
+                        symbol: 'migrate' ,
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+
+
+        {% embed './04_organisms/sliderSwitch.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--neutrals-2',
+            'bgColor' : 'bgc--theme-4-lighter',
+            'btnColor' : 'btn--theme-2',
+            'barColor' : 'bgc--theme-4',
+        } %}
+            {% set slider = {
+                accordeon: true,
+                slidertitle: 'Governance',
+                ctatitle: 'Get in touch',
+                ctalink: '/contact',
+                slides: [
+                    {
+                        title: 'We want to train our users to work with Teams',
+                        body: 'Off the shelf training packages are often time-consuming, expensive and not meeting your business targets. But with Semasu you’ll book instant success. How? We use a blend of to-the-point training, comprehensive self-service, live communities and webinars.',
+                        symbol: 'smartphone',
+                    },
+                    {
+                        title: 'We want to structure and optimize our SharePoint environment',
+                        body: "SharePoint isn't just an office tool. It serves your communication, collaboration, workflow and intranet needs, to name a few. Lacking governance can easily lead to information chaos, security leaks and an unmanageable environment. And that's something we can do without… Successful governance is not just a lengthy document, but an instrument that is understood, applied and followed by your business.",
+                        symbol: 'smartphone',
+                    },
+                    {
+                        title: 'Can you help us to stay on top of innovations and changes?',
+                        body: 'New functionalities and changes are launched daily. And you guessed it right; Semasu is up to date with the latest developments. And because we understand your company, we will inform you of changes that might impact you or can be a benefit to your business. We stay on top of things for you. After all, it is what we love doing.',
+                        symbol: 'migrate' ,
+                    },
+                ]
+            } %}
+        {% endembed %}
+
+    </section>
+
+    <section class="business__outro section--xlarge spacer--in-top">
+
+        {% embed './03_molecules/cta.html.twig' %}
+            {% block ctatitle %} Convinced about working together on your Microsoft 365 journey? {% endblock %}
+            {% block ctadesc %} Our goal is to help you work better together and optimize your workflow. {% endblock %}
+            {% block ctalabel %} Let's talk {% endblock %}
+            {% block ctalink %} /contact {% endblock %}
+        {% endembed %}
+
+    </section>
+
+{% endblock %}

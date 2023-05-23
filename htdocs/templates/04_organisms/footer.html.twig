@@ -1,0 +1,21 @@
+<footer class="footer">
+	<div class="footer__outer">
+		<div class="footer__inner">
+			<a href="/" class="footer__brand">
+				{% include '03_molecules/brand.html.twig' %}
+			</a>
+			
+			<div class="footer__nav">
+				{% include '03_molecules/footerNav.html.twig' %}	
+			</div>
+			
+			<div class="footer__legal">
+				{% include '03_molecules/legal.html.twig' %}		
+			</div>
+
+			
+		</div>
+
+ 		{% include './02_atoms/flare/flare.html.twig' with {'animate' : true, 'flareColor': 'theme-1'} %} 
+	</div>
+</footer>

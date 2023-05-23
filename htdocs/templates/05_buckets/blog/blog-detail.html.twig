@@ -1,0 +1,83 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Secure your Microsoft 365 environment with multi-factor authentication{% endblock %}
+{% block ogtitle %}Secure your Microsoft 365 environment with multi-factor authentication{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+<section class="blogDetail__hero">
+	
+	{% embed './04_organisms/fullscreenVisual.html.twig' %}
+		{% block herovisualsrc %}semasu-blog-hero.jpg{% endblock %}  
+    {% block herotitle %}Secure your Microsoft 365 environment with multi-factor authentication{% endblock %}
+	{% endembed %}	
+
+</section>
+
+<section class="blogDetail__primary bgc--light spacer--in-top">
+	<div class="section--xlarge">
+	
+	{% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' }%}
+		{% block maincontenttitle %} Use Office Message Encryption {% endblock %}
+		{% block maincontentbody %} 
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p> 
+			<img class="fullscreen" src="/dist/img/semasu-blog-detail.jpg" alt="Blog Detail Visual">
+			<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p> 
+		{% endblock %}
+	{% endembed %}
+	
+	</div>
+</section>
+
+<section class="blogDetail__secondary bgc--light spacer--in-top">
+	
+		{% embed './03_molecules/testimony.html.twig' 
+			with {
+				'bgColor' : 'bgc--theme-5',
+				'fcColor' : 'fc--light',
+			} 
+		%}
+			{% block testimonyquote %} "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim." {% endblock %}
+		{% endembed %}
+
+</section>
+
+<section class="blogDetail__tertiary bgc--light spacer--in-top">
+	<div class="section--xlarge">
+	
+	{% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' }%}
+		{% block maincontenttitle %} Lorem ipsum dolor sit amet {% endblock %}
+		{% block maincontentbody %} 
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p> 
+		{% endblock %}
+	{% endembed %}
+	
+	</div>
+</section>
+
+<section class="blogDetail__outro bgc--light">
+		
+	<div class="section--xlarge">
+		{% embed './03_molecules/readMore.html.twig' %}
+			{% block readmoretitle %} More news {% endblock %}
+			{% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+			{% block readmorevisual %} semasu-blog-detail-2.jpg {% endblock %}
+			{% block readmorelink %} /blog {% endblock %}
+		{% endembed %}	
+	</div>
+	
+   <div class="section--small spacer--in-top">
+	  {% embed './03_molecules/cta.html.twig' %}
+	    {% block ctatitle %} Looking for a simular solution for your company? {% endblock %}
+	    {% block ctadesc %} At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. {% endblock %}
+	    {% block ctalabel %} Let's talk {% endblock %}
+	    {% block ctalink %} #0 {% endblock %}  
+	  {% endembed %}
+	</div>
+	{% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}	
+</section>
+
+{% endblock %}

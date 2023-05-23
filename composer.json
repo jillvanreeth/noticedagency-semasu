@@ -1,0 +1,26 @@
+{
+  "name": "noticed/semasu",
+  "description": "Site for semasu",
+  "prefer-stable": false,
+  "require": {
+    "twig/twig": "^2.1",
+    "phpmailer/phpmailer": "^6.1",
+    "ext-json": "*"
+  },
+  "authors": [
+    {
+      "name": "Alessandro Aussems",
+      "email": "alessandro@noticed.be"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "": "htdocs/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  }
+}

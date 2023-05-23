@@ -1,0 +1,7 @@
+.sliderItemSwitch {
+	@include media('small') {
+		padding: 0 0 gap('xxlarge');
+	}
+
+	padding-bottom: gap('large');
+}

@@ -1,0 +1,32 @@
+.business__hero {
+	overflow: visible;
+}
+
+.business__primary {
+	overflow-x: hidden;
+}
+
+.business__primary__header {
+	display: block;
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('xxsmall') gap('small');
+
+	@include media('small') {
+		display: none;
+	}
+}
+
+.business__primary__title {
+	color: inherit; font-size: fontSize('xsmall');
+	font-family: font('light'); color: color('neutrals-1');
+}
+
+
+.business__outro {
+	
+	@include media('large') {
+		max-width: section('small');	
+	}
+}

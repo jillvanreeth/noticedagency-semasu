@@ -1,0 +1,148 @@
+.why {
+	@include media('medium') {
+		padding: 0 gap('large');
+	}
+
+	display: block;
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: 0 gap('small');
+}
+
+.why__title {
+	color: color('theme-0');
+	font-family: font('bold');
+}
+
+.why__inner {
+	@include media('large') {
+		padding-top: gap('large');
+		display: flex;
+		justify-content: space-between;
+
+		flex-flow: row wrap;
+	}
+
+	padding-top: gap('small');
+}
+
+.why__itemWrap {
+	@include media('large') {
+		flex: 0 0 46%;
+	}
+}
+
+.why__item {
+	@include media('small') {
+		margin-bottom: gap('small');
+	}
+	@include media('large') {
+		margin-bottom: gap('medium');
+	}
+
+	margin-bottom: gap('xsmall');
+	overflow: hidden;
+	color: color('neutrals-1');
+	border-bottom: 1px solid color('neutrals-1');
+	cursor: pointer;
+}
+
+.why__item__inner {
+	@include media('small') {
+		padding: gap('medium') 0;
+	}
+	@include media('large') {
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	padding: gap('small') 0 gap('xsmall');
+}
+
+.why__content {
+	@include media('medium') {
+		font-size: fontSize('small');
+	}
+
+	transition: max-height .35s ease-in-out;
+	height: 0;
+	max-height: 0;
+	overflow: hidden;
+	font-size: fontSize('xsmall');
+
+	.accordeon-is-open & {
+		height: auto;
+		max-height: 1000px;
+	}
+}
+
+.why__content__inner {
+	padding: 0 0 gap('medium');
+}
+
+.why__item__symbol {
+	@include media('medium') {
+		width: 24px;
+		height: 24px;
+	}
+
+	position: relative;
+	display: block;
+	width: 12px;
+	height: 12px;
+
+	span {
+		transition: all .25s ease;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: color('theme-0');
+
+		&:last-child {
+			transform: rotate(90deg);
+		}
+
+		.accordeon-is-open & {
+			&:first-child {
+				transform: rotate(90deg);
+				opacity: 0;
+			}
+			&:last-child {
+				transform: rotate(0);
+			}
+		}
+	}
+}
+
+.why__item__title {
+	@include media('medium') {
+		font-size: fontSize('large');
+	}
+	@include media('large') {
+		font-size: fontSize('xlarge');
+	}
+
+	font-size: fontSize('small');
+}
+
+.why__link {
+	@include media('large') {
+		padding-top: gap('small');
+	}
+
+	display: block;
+	padding-top: gap('xsmall');
+	color: color('theme-0');
+	text-decoration: none;
+}
+
+.why__link__label {
+	padding-bottom: 3px;
+	border-bottom: 1px solid color('theme-0');
+}

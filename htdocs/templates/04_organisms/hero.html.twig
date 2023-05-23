@@ -1,0 +1,21 @@
+<div class="hero {{ bgColor }} {{ variant }} {{ fcColor }}">
+
+	<div class="hero__inner">
+
+		<header class="hero__header">
+			<h1 class="hero__title heading--0">{% block herotitle %} Title hero {% endblock %}</h1>
+		
+			{% if block('herosubtitle') is defined %}	
+				<h3 class="hero__subtitle heading--4">{{ block('herosubtitle') }}</h3>
+			{% endif %}
+
+			{% if block('herolinktitle') is defined %}
+				<a href="/" class="button button--ghost hero__link">
+					<span class="button__label">{{ block('herolinktitle') }}</span>
+				</a>
+			{% endif %}
+		</header>
+	
+	</div>
+
+</div>

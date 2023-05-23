@@ -1,0 +1,95 @@
+.footer {
+	@include media('medium') {
+		padding-top: gap('xxxlarge');
+	}
+	@include media('large') {
+		padding-top: gap('xxxxlarge');
+	}
+
+	position: relative;
+	padding-top: gap('xlarge');
+	overflow: hidden;
+	color: color('light');
+	background-color: color('light');
+
+	flex-shrink: 0;
+}
+
+.footer__outer {
+	position: relative;
+	overflow: hidden;
+	background-color: color('theme-4');
+}
+.footer__inner {
+	@include media('small') {
+		display: flex;
+		flex-direction: column;
+		padding: gap('xxxlarge') gap('large');
+	}
+	@include media('large') {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('large') gap('small');
+	overflow: hidden;
+}
+
+.footer__brand {
+	@include media('small') {
+		width: 80px;
+		height: 101px;
+		margin-top: gap('xxlarge');
+
+		order: 2;
+	}
+	@include media('large') {
+		width: 88px;
+		height: 110px;
+		margin-top: gap('xxxlarge');
+	}
+
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 50px;
+	height: 63px;
+}
+
+.footer__nav {
+	@include media('small') {
+		padding: 0;
+
+		order: 1;
+	}
+	@include media('large') {
+		flex: 0 0 100%;
+	}
+
+	position: relative;
+	z-index: 1;
+	padding: gap('large') 0 0;
+}
+
+.footer__legal {
+	@include media('small') {
+		padding-top: gap('large');
+
+		order: 3;
+	}
+	@include media('large') {
+		margin-left: auto;
+		padding-top: gap('xxxlarge');
+
+		align-self: flex-end;
+	}
+
+	position: relative;
+	z-index: 1;
+	padding-top: gap('xlarge');
+}

@@ -1,0 +1,20 @@
+.input__label {
+	transition: all 100ms ease;
+	position: absolute;
+	top: 18px;
+	left: 0;
+	display: block;
+	color: color('neutrals-1');
+	font-family: font('normal');
+	font-size: fontSize('small');
+	line-height: 1;
+	
+	.has-value & {
+		top: 0;
+		font-size: fontSize('xxsmall');
+	}
+
+	.is-invalid & {
+		color: color('negative');
+	}
+}

@@ -1,0 +1,27 @@
+<div class="mainContent">
+	
+	<header class="mainContent__header {{fcColor}}">
+		<h3 class="mainContent__title heading--3">
+			{% block maincontenttitle %} Title {% endblock %}
+		</h3>
+	</header>
+
+	{% if block('maincontentclient') is defined %}
+		<div class="mainContent__client {{fcColor}}">
+			<span class="mainContent__client__label">{{ block('maincontentclient') }}</span>
+		</div>
+	{% endif %}
+
+	<div class="mainContent__content">
+		{% if block('maincontentintro') is defined %}
+			<div class="mainContent__intro">
+				{{ block('maincontentintro') }}
+			</div>
+		{% endif %}
+
+		<div class="mainContent__body richTextContent">
+			{% block maincontentbody %} Body {% endblock %}
+		</div>
+	</div>
+
+</div>

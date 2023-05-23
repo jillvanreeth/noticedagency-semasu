@@ -1,0 +1,116 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Upgrade Microsoft 365 {% endblock %}
+{% block ogtitle %}Upgrade Microsoft 365 with cloud security{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="blogDetail__hero">
+
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-blog-hero.jpg{% endblock %}
+            {% block herotitle %}Upgrade Microsoft 365 with cloud security{% endblock %}
+        {% endembed %}
+
+    </section>
+
+    <section class="blogDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Cloud security {% endblock %}
+                {% block maincontentbody %}
+                    <p>The security features of Microsoft 365 are a great start to collaborate on your organizations key
+                        content safely. Microsoft does everything in its power to protect your data in the cloud.
+                        The Security & Compliance Center included in Microsoft 365 allows you to set policies to secure
+                        data in your cloud environment. Alerts will trigger as soon as a policy is breached, and even
+                        automatic remediation is possible.
+                        If you want to expand your reach to applications outside Microsoft 365, Microsoft offers an
+                        additional service, Microsoft Enterprise Mobility & Security (EMS). With Enterprise Mobility &
+                        Security on top of Microsoft 365, you can get:</p>
+                    <ul>
+                        <li>Better <strong>identity and access management</strong>, connecting people, devices, apps and
+                            data.
+                        </li>
+                        <li>Additional <strong>information protection</strong> abilities. See and control how files are
+                            being used.
+                        </li>
+                        <li>An <strong>insight on threats</strong>, compromised identities, and malicious actions across
+                            your on-premises
+                            and cloud environments.
+                        </li>
+                        <li>A deep view in what data is cloud applications thanks to Microsoft <strong>Cloud App
+                                Security</strong></li>
+                        <li>More <strong>secure corporate mobile devices</strong>, using Intune to manage these assets.
+                        </li>
+                    </ul>
+                    <img class="fullscreen" src="/dist/img/semasu-blog-detail.jpg" alt="Blog Detail Visual">
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__tertiary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Shadow IT {% endblock %}
+                {% block maincontentbody %}
+                    <p>If you want to have control over your corporate data, you must have an idea on where that data is
+                        stored. Thanks to the Cloud Discovery capabilities, you can easily see what applications are
+                        being used in your company. This will broaden your view from your Microsoft 365 environment to
+                        include any cloud application.</p>
+                    <p>An example on what this information can offer: OneDrive for Business is rolled out for “personal”
+                        professional file storage, but in the Cloud Discovery report you notice that a large volume of
+                        data is being stored in DropBox. This Shadow IT example could be a trigger to mitigate this
+                        potential threat for data loss.</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__tertiary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} Mobile devices {% endblock %}
+                {% block maincontentbody %}
+                    <p>If your company issues mobile devices for employees to access corporate data, most likely, you
+                        want to add some security. Microsoft Intune allows you to manage these devices and make a clear
+                        separation between private and company data. By installing corporate-managed applications,
+                        accessible with company credentials, it's possible to access corporate data in a secure way.</p>
+                    <p>Excellent protection allows your company to put corporate information into your employees' hands
+                        securely. Device stolen? Corporate data will not be easily accessible. Once noticed by the
+                        owner, he or she can wipe the device remotely. Piece of cake!</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More news {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} semasu-blog-detail-2.jpg {% endblock %}
+                {% block readmorelink %} /blog {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Want to know more? {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Get in touch {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+{% endblock %}

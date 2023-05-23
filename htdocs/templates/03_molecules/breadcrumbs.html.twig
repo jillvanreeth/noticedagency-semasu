@@ -1,0 +1,15 @@
+<nav class="breadcrumbs">
+	<ul class="breadcrumbs__list">
+		
+		{% for crumb in breadcrumbs %}
+
+			<li class="breadcrumbs__list__item">
+				<a href="{{ crumb.link }}" class="breadcrumbs__link">
+					<span class="breadcrumbs__label">{{ crumb.label }}</span>
+					<span class="breadcrumbs__symbol">{% include './02_atoms/symbols/chevron--right.html.twig' %}</span>
+				</a>
+			</li>
+
+		{% endfor %}
+	</ul>
+</nav>

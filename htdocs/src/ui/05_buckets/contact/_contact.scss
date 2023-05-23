@@ -1,0 +1,12 @@
+.contact__hero {
+	position: relative;
+	overflow: hidden;
+}
+.contact__secondary {
+	@include media('large') {
+		margin-bottom: - gap('xxxxlarge');
+	}
+
+	position: relative;
+	z-index: 1;
+}

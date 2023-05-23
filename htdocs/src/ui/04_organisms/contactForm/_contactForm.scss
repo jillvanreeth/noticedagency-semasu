@@ -1,0 +1,117 @@
+.contactForm {
+	@include media('large') {
+		padding: 0 gap('large');
+	}
+
+	display: block;
+	padding: 0 gap('small');
+}
+
+.contactForm__title {
+	color: color('theme-0');
+	font-family: font('bold');
+
+	@include media('small') {
+		padding-bottom: gap('large');
+	}
+	@include media('large') {
+		padding-bottom: gap('xlarge');
+	}
+
+	padding-bottom: gap('small');
+
+}
+
+.contactForm__theForm {
+	
+	.form-is-succes &,
+	.form-is-failed & {
+		display: none;
+	}
+}
+
+.contactForm__inner {
+	@include media('large') {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	display: block;
+}
+
+.contactForm__itemWrap {
+	@include media('small') {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&:first-child {
+			width: 60%;
+		}
+	}
+	@include media('large') {
+		flex: 0 0 60%;
+
+		&:first-child {
+			flex: 0 0 35%;
+		}
+	}
+
+	width: 100%;
+}
+
+.contactForm__item {
+	@include media('small') {
+		flex: 0 0 48%;
+		margin-top: gap('medium');
+	}
+	@include media('large') {
+		margin-top: gap('large');
+
+		&:nth-child(-n+2) {
+			margin-top: 0;
+		}
+	}
+
+	width: 100%;
+	margin-top: gap('xsmall');
+
+	&:last-child {
+		flex: 0 0 100%;
+	}
+}
+
+.contactForm__submit {
+	@include media('small') {
+		padding-top: gap('large');
+	}
+	@include media('large') {
+		flex: 0 0 60%;
+		margin-left: auto;
+	}
+
+	width: 100%;
+	padding-top: gap('small');
+}
+
+.contactForm__succesMessage {
+	display: none;
+	padding: gap('large') 0 0;
+	color: color('neutrals-1');
+	font-size: fontSize('small');
+
+	.form-is-succes & {
+		display: block;
+	}
+}
+
+.contactForm__errorMessage {
+	display: none;
+	padding: gap('large') 0 0;
+	color: color('neutrals-1');
+	font-size: fontSize('small');
+
+	.form-is-failed & {
+		display: block;
+	}
+}

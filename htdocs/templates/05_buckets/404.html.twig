@@ -1,0 +1,15 @@
+{% extends "./00_globals/master.html.twig" %}
+{% block title %}404{% endblock %}
+{% block ogtitle %}404{% endblock %}
+{% block content %}
+    <section class="section business__hero page-not-found__hero">
+
+        {% embed './04_organisms/hero.html.twig' with { 'variant' : 'hero--center', 'fcColor' : 'fc--theme-3' } %}
+            {% block herotitle %} 404 {% endblock %}
+            {% block herosubtitle %} This page doesn't exist {% endblock %}
+            {% block herolinktitle %} home {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+{% endblock %}

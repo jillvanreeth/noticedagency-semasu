@@ -1,0 +1,101 @@
+<div class="contactForm">
+	
+	
+	
+	<form action="/mailer.php" class="form contactForm__theForm" method="post" novalidate>
+		
+		<h2 class="contactForm__title heading--3">Get in touch</h2>	
+	
+		<div class="contactForm__inner">
+			
+			<div class="contactForm__itemWrap">
+				<div class="contactForm__item">
+					<div class="selectDropdown">
+						<div class="selectDropdown__selectedOption">
+							<span class="selectDropdown__label">Choose the subject</span>
+							<div class="selectDropdown__selectedOption__label"></div>	
+							<div class="selectDropdown__symbol">{% include './02_atoms/symbols/chevron--down.html.twig' with { 'symbolFill' : 'fill--theme-0' } %}</div>	
+						</div>
+
+						<div class="selectDropdown__select">
+							<div class="selectDropdown__option">I want to learn more about possible solutions</div>
+							<div class="selectDropdown__option">I want to make an appointment</div>
+							<div class="selectDropdown__option">I want to know more about the pricing</div>
+							<div class="selectDropdown__option">I want to purchase credits</div>
+							<div class="selectDropdown__option">Other</div>
+						</div>
+
+						<span class="errorMessage">Please choose a subject. We want your message to end up in the right mailbox.</span>
+
+						<input type="hidden" class="input__field" name="subject" value="" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="contactForm__itemWrap">
+			
+				<div class="contactForm__item">
+					<label class="input input--text">
+						<span class="input__label">First name</span>
+						<input type="text" name="firstname" class="input__field" required>
+						<span class="errorMessage">What do we call you?</span>
+					</label>
+				</div>
+
+				<div class="contactForm__item">
+					<label class="input input--text">
+						<span class="input__label">Last name</span>
+						<input type="text" name="lastname" class="input__field" required>
+						<span class="errorMessage">Could you give us your last name? We won’t tell anyone!</span>
+					</label>
+				</div>
+
+				<div class="contactForm__item">
+					<label class="input input--text">
+						<span class="input__label">E-mail</span>
+						<input type="email" name="email" class="input__field" required>
+						<span class="errorMessage">Please tell us how we can reach you.</span>
+						<span class="errorMessage is-invalid">Could you double-check? Otherwise we won’t be able to reach you.</span>
+					</label>
+				</div>
+
+				<div class="contactForm__item">
+					<label class="input input--text">
+						<span class="input__label">Company</span>
+						<input type="text" name="company" class="input__field" required>
+						<span class="errorMessage">We love your business! Could you tell us your company name?</span>
+					</label>
+				</div>
+				
+				<div class="contactForm__item">
+					<label class="input input--textarea">
+						<span class="input__label">Your message / question</span>
+						<textarea name="textarea" class="input__field" required></textarea>
+						<span class="errorMessage">Please tell us how we can help you.</span>
+					</label>
+				</div>
+
+			</div>
+
+			<div class="contactForm__submit">
+				<button class="button btn--theme-0" type="submit">
+					<span class="button__label">send message</span>
+				</button>
+			</div>
+
+		</div>
+	</form>
+	
+	<div class="contactForm__succesMessage">
+		<h2 class="contactForm__title heading--3">Get in touch</h2>	
+
+		<p>Thanks, we will get back to you as soon as possible!</p>
+	</div>
+	
+	<div class="contactForm__errorMessage">
+		<h2 class="contactForm__title heading--3">Something went wrong</h2>	
+		
+		<p>Oops, that didn’t go as expected! Please try again later.</p>
+	</div>
+	
+</div>

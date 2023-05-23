@@ -1,0 +1,44 @@
+<div class="strategies">
+	{# <div class="strategies__inner"> #}
+		
+		<h2 class="strategies__title heading--3">Strategic solutions for business partners</h2>
+		
+		<div class="strategies__summary">
+			<p>How can we get the most out of Microsoft 365? Which applications are valuable for my company?</p>
+		</div>
+		
+		<div class="strategies__slider">
+			{% embed './03_molecules/draggslider.html.twig' with { 'symbolFill' : 'fill--light', 'titleColor' : 'fc--theme-1', 'barColor' : 'bgc--theme-1' } %} 
+				{% 
+					set slider = {
+						accordeon: false,
+						slides: [
+							{ 
+								title: '"How can we get the most out of Microsoft 365? Which applications are valuable for my company?"',
+								symbol: 'migrate', 
+							},
+							{ 
+								title: '"Our SharePoint environment got a bit out of hand... What can we do to make it healthy again?"',
+								symbol: 'files',
+							},
+							{ 
+								title: '"We want to get rid of our current file share solution. Is it possible to move everything to Microsoft 365?"',
+								symbol: 'folder' ,
+							},
+						]
+					}
+				%}
+			{% endembed %}
+		</div>
+
+		<div class="strategies__cta">
+			<a href="/solutions-for-business-partners" class="button button--ghost"><span class="button__label">Discover all business solutions</span></a>
+		</div>
+	
+		<div class="strategies__visual" style="background-image: url(dist/img/semasu-people-meeting.jpg)"></div>
+
+	{# </div> #}
+	
+	{% include './02_atoms/flare/flare.html.twig' with {'animate' : true, 'flareColor': 'theme-2'} %}
+
+</div>

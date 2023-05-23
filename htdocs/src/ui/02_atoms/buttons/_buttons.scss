@@ -1,0 +1,128 @@
+
+.button {
+	@include media('large') {
+		height: 75px;
+		font-size: fontSize('large');
+	}
+	@include media('small') {
+		height: 70px;
+		font-size: fontSize('medium');
+	}
+
+	transition: color 150ms, border-color 150ms, background-color 150ms;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	margin: 0;
+	padding: 0 gap('small');
+	color: color('light');
+	font-family: font('bold');
+	font-size: fontSize('xsmall'); // 20px desk
+	font-weight: normal;
+	line-height: 1;
+	text-decoration: none;
+	border: 2px solid;
+	border-color: inherit;
+	border-radius: 0;
+	outline: 0;
+	background-color: color('theme-4');
+	cursor: pointer;
+
+	&:not([disabled]):hover {
+		color: color('theme-4');
+		border-color: color('theme-4');
+		background-color: color('light');
+	}
+
+	&.inverted {
+		color: color('theme-4');
+		border-color: color('light');
+		background-color: color('light');
+
+		&:not([disabled]):hover {
+			color: color('light');
+			border-color: color('light');
+			background-color: color('theme-4');
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		cursor: default;
+		opacity: .5;
+	}
+
+	// generate colors
+	@each $colorName, $colorValue, $color in $colors {
+		&.btn--#{$colorName} {
+			@include media('small') {
+				border-color: color(#{$colorName});
+				background-color: color(#{$colorName});
+
+				&:not([disabled]):hover {
+					color: color(#{$colorName});
+					border-color: color(#{$colorName});
+					background-color: transparent;
+				}
+			}
+			@include media('small', 'max-width') {
+				height: auto;
+				padding: 0 0 gap('xxxsmall');
+				color: color(#{$colorName});
+				border: none;
+				border-bottom: 3px solid color(#{$colorName});
+				background-color: transparent;
+
+
+				&:not([disabled]):hover {
+					color: color(#{$colorName});
+					border-color: color(#{$colorName});
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+.button--fluid {
+	display: flex;
+	width: 100%;
+}
+
+.button--ghost {
+	@include media('small') {
+		padding: 0 gap('small');
+		border-width: 2px;
+		border-color: inherit;
+	}
+
+	padding: 0;
+	color: inherit;
+	border: 0;
+	border-style: solid;
+	border-style: solid;
+	border-bottom-width: 2px;
+	background-color: transparent;
+
+	&:not([disabled]):hover {
+		background-color: inherit;
+	}
+
+	// generate colors
+	@each $colorName, $colorValue, $color in $colors {
+		&.btn--#{$colorName} {
+			border-color: color(#{$colorName});
+			background-color: transparent;
+
+			&:not([disabled]):hover {
+				@include media('small') {
+					background-color: rgba(color(#{$colorName}), .2);
+				}
+
+				color: color(#{$colorName});
+				border-color: color(#{$colorName});
+			}
+		}
+	}
+}

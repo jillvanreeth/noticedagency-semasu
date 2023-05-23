@@ -1,0 +1,30 @@
+.errorMessage {
+	display: none;
+	margin-top: gap('xxsmall');
+	padding: 0;
+	color: inherit;
+	font-family: font('normal');
+	font-size: fontSize('xsmall');
+
+	
+	.is-invalid & {
+		display: block;
+		color: color('negative');
+	}
+
+	&.is-invalid {
+		display: none;
+		.has-value.is-invalid & {
+			display: block;
+		}
+	}
+
+	.has-value.is-invalid & {
+		display: none;
+	}
+
+	.is-valid & {
+		display: block;
+		color: color('positive');
+	}
+}

@@ -1,0 +1,29 @@
+<header class="header">
+	
+	<div class="header__inner">
+		
+		<div class="header__inner__wrap">
+			<a href="/" class="header__brand">
+				{% include '03_molecules/brand.html.twig' %}
+			</a>
+
+			<a href="/" class="header__ie hide">
+				{% include '02_atoms/symbols/semasu-logo.html.twig' %}
+			</a>
+			
+			<div class="header__nav">
+				<div class="header__menuIcon">
+					{% include '02_atoms/menuIcon.html.twig' %}
+				</div>
+
+				{% include '03_molecules/mainNav.html.twig' %}
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="header__offcanvas">
+		{% include '03_molecules/offcanvasMenu.html.twig' %}
+	</div>
+
+</header>

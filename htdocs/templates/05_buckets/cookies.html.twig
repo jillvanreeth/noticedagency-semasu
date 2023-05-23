@@ -1,0 +1,116 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Cookies{% endblock %}
+{% block ogtitle %}Cookies{% endblock %}
+{% block colormode %}darkMode{% endblock %}
+
+{% block content %}
+
+    <section class="cookies__primary bgc--light">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-4' } %}
+                {% block maincontenttitle %} Cookies {% endblock %}
+                {% block maincontentintro %}
+                    <p>Cookies can be subject to the GDPR insofar as they lead to personal data is processed. In
+                        addition, other legislation applies to this, however (Directive 2002/58/EC (Recital 25 and
+                        Article 5, (3) and the transposition of this into Belgian law by Article 129 of the Act of 13
+                        June 2005 (as amended by the Act of 10 July 2012):</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    {#<p>Ut wisi enim ad minim veniam, quis <a href="#0">nostrud</a> exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate <strong> velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero</strong> eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>#}
+                    <p><strong> Article 129.[1 Storing information or obtaining access to information that is already]1
+                            stored in the end equipment of a subscriber or user is only allowed on the condition
+                            that:</strong></p>
+                    <p><strong>1° in accordance with the conditions provided in the Act of 8 December 1992 on the
+                            Protection of Privacy regarding the Processing of Personal Data, the subscriber or user
+                            concerned receives clear and precise information on the purposes of the processing and on
+                            his rights based on the Act of 8 December 1992;</strong></p>
+                    <p><strong>2° the subscriber or end user has given his consent after he has been informed in
+                            accordance with the provisions in 1°</strong></p>
+                    <p><strong>The first paragraph does not apply to the technical storage of information or the access
+                            to information saved in the end equipment of a subscriber or an end user, the sole purposes
+                            of which are to send communication via an electronic communications network or where it is
+                            strictly essential to provide a service explicitly requested by the subscriber or end
+                            user.</strong></p>
+                    <p><strong>The consent in the sense of the first paragraph or the application of the second
+                            paragraph does not release the controller from the obligations of the Act of 8 December 1992
+                            on the Protection of Privacy regarding the Processing of Personal Data, which is not imposed
+                            in this Article.</strong></p>
+                    <p><strong>The controller offers the subscribers or end users the opportunity of simply withdrawing
+                            the consent given, free of charge.</strong></p>
+                    <p>This regulation therefore prescribes that, in principle, consent is required for cookies, unless
+                        an exception as referred to in this article is concerned.</p>
+                    <p>Cookies which, based on these criteria according to the Article 29 Working Party are not subject
+                        to consent (and are therefore subject to the obligation of information) are:</p>
+                    <ul>
+                        <li><strong>user‑input cookies</strong> (session-id) such as first‑party cookies to keep track
+                            of the user's input when filling online forms, shopping carts, etc., for the duration of a
+                            session or persistent cookies limited to a few hours in some cases
+                        </li>
+                        <li><strong>authentication cookies</strong>, to identify the user once he has logged in, for the
+                            duration of a session
+                        </li>
+                        <li><strong>user‑centric security cookies</strong>, used to detect authentication abuses, for a
+                            limited persistent duration
+                        </li>
+                        <li><strong>multimedia content player cookies</strong>, used to store technical data to play
+                            back video or audio content, for the duration of a session
+                        </li>
+                        <li><strong>load‑balancing cookies</strong>, for the duration of session</li>
+                        <li><strong>user‑interface customization cookies such as language or font preferences</strong>,
+                            for the duration of a session (or slightly longer)
+                        </li>
+                        <li><strong>third‑party social plug‑in content‑sharing cookies</strong>, for logged‑in members
+                            of a social network.
+                        </li>
+                    </ul>
+                {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-4' } %}
+                {% block maincontenttitle %} Grounds for the processing {% endblock %}
+                {% block maincontentintro %}
+                    <p>In general, the Controller will only process personal data in the cases allowed by Article 6.1 of
+                        the GDPR, i.e.</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <ul>
+                        <li>based on your specific consent;</li>
+                        <li>when this is necessary within the scope of the performance of a contract;</li>
+                        <li>for compliance with a legal or regulatory obligation;</li>
+                        <li>when this is necessary in order to protect the vital interests of the data subject;</li>
+                        <li>when this is necessary for the purposes of the legitimate interests pursued by the company
+                            (e.g. preventing fraud, for internal administrative purposes, direct marketing, etc.);
+                        </li>
+                    </ul>
+                    <p>Users below the age of 13 years must ask their parents or guardian for permission to be able to
+                        validly give their consent and to provide data.</p>
+                {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-4' } %}
+                {% block maincontenttitle %} For what purposes will this data be used? {% endblock %}
+                {% block maincontentintro %}
+                    <p>In particular, the Controller processes your personal data for the following purposes (having the relevant basis):</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <ul>
+                        <li>to provide information regarding our services</li>
+                        <li>to generally manage customers, including tax obligations and any loyalty programmes</li>
+                        <li>to process requests and questions</li>
+                        <li>to show relevant communication and advertisement/marketing messages</li>
+                        <li>to send newsletters and special offers</li>
+                        <li>to inform the Manager or the owner of questions and answers relating to the letting or commercialising of spaces referred to in point B</li>
+                        <li>to protect our rights</li>
+                        <li>to make analyses and do market research with a view to improving the service provision</li>
+                    </ul>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+{% endblock %}

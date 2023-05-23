@@ -1,0 +1,62 @@
+<div class="draggslider">
+
+    {% if slider.slidertitle %}
+        <header class="draggslider__header {{ slider.accordeon ? 'accordeon__trigger' }} {{ titleColor }}">
+            <span class="draggslider__header__symbol {{ slider.accordeon ? 'accordeon__symbol' }}">{% include  '02_atoms/symbols/chevron--down.html.twig' with { 'symbolFill' : symbolFill } %}</span>
+            <h3 class="draggslider__title heading--3">{{ slider.slidertitle }}</h3>
+            {% if slider.sliderintro %}
+                <p class="draggslider__intro">{{ slider.sliderintro|nl2br }}</p>
+            {% endif %}
+        </header>
+    {% endif %}
+
+    <div class="draggslider__inner {{ slider.accordeon ? 'accordeon__target' }}">
+
+        <div class="draggslider__itemWrap {{ slider.accordeonitems ? 'accordeon' }}">
+            {% for item in slider.slides %}
+
+                <div class="draggslider__item {{ slider.accordeonitems ? 'accordeon__item' }}">
+                    <div class="draggslider__item__inner">
+
+                        {% if item.symbol %}
+                            <span class="draggslider__item__symbol"> {% include '02_atoms/symbols/' ~ item.symbol ~ '.html.twig' with { 'symbolFill' : symbolFill } %} </span>
+                        {% endif %}
+
+                        <div class="draggslider__content ">
+                            <header class="draggslider__item__header {{ slider.accordeonitems ? 'accordeon__trigger' }}">
+                                {% if item.symbol == null %}
+                                    <span class="draggslider__item__step {{ titleColor }}"><span
+                                                class="draggslider__item__step__label">{{ loop.index }}</span></span>
+                                {% endif %}
+
+                                {% if item.title %}
+                                    <span class="draggslider__item__title {{ titleColor }}">{{ item.title }}</span>
+                                {% endif %}
+                            </header>
+
+                            {% if item.body %}
+                                <div class="draggslider__body {{ bodyColor }} {{ slider.accordeonitems ? 'accordeon__target' }}">
+                                    <p>{{ item.body }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="draggslider__bar {{ barColor }}">
+            <span></span>
+        </div>
+
+        {% if slider.ctatitle %}
+            <div class="draggslider__cta {{ titleColor }}">
+                <a href="{{ slider.ctalink }}" class="button {{ btnColor }} {{ btnStyle }} "><span
+                            class="button__label">{{ slider.ctatitle }}</span></a>
+            </div>
+        {% endif %}
+    </div>
+
+</div>

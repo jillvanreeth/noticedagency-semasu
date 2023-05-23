@@ -1,0 +1,17 @@
+<div class="cta">
+	<div class="cta__inner">
+		
+		<h2 class="cta__title heading heading--3">{% block ctatitle %} CTA title {% endblock %}</h2>
+
+		<div class="cta__content">
+			<p>{% block ctadesc %} CTA desc {% endblock %}</p>
+		</div>
+		
+		<div class="cta__theCta">
+			<a href="{{ block('ctalink')|trim }}" class="button btn--theme-4">
+				{% block ctalabel %} CTA label {% endblock %}
+			</a>
+		</div>
+
+	</div>
+</div>

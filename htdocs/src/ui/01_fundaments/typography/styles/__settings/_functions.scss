@@ -1,0 +1,18 @@
+/**
+ *
+ * TYPOGRAPHY: FUNCTIONS
+ *
+ */
+
+@function fontSize($size: 'medium') {
+	@return map-get($fontSizes, quote($size));
+}
+
+@function titleSize($size: 'medium') {
+	@return map-get($titleSizes, quote($size));
+}
+
+
+@function font($size: 'normal') {
+	@return map-get($fonts, $size);
+}

@@ -1,0 +1,11 @@
+.cookies__primary {
+	@include media('small') {
+		padding: (gap('xlarge') + 150px) 0 gap('large');
+	}
+	@include media('large') {
+		padding-bottom: gap('xxxlarge');
+	}
+
+	position: relative;
+	padding: gap('xlarge') * 2 0 gap('large');
+}

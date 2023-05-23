@@ -1,0 +1,21 @@
+<div class="readMore spacer--in-top">
+	
+	<h4 class="readMore__title heading--3">{{ block('readmoretitle')|trim }}</h4>
+
+	<a href="{{ block('readmorelink')|trim }}" class="readMore__visualWrap">		
+		<div class="readMore__visual">
+			<div class="readMore__visual__sizer">
+				<div class="readMore__visual__reset">
+					<img src="/dist/img/{{ block('readmorevisual')|trim }}" alt="Read More">
+				</div>
+			</div>
+
+			<span class="readMore__label">{% block readmorelabel %} Read more label {% endblock %}</span>
+		</div>
+
+		<div class="readMore__helper">
+
+			<span class="readMore__symbol">{% include './02_atoms/symbols/arrow--right.html.twig' with { 'symbolFill' : 'fill--light' } %}</span>
+		</div>
+	</a>
+</div>

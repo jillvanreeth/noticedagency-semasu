@@ -1,0 +1,111 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}One Global intranet{% endblock %}
+{% block ogtitle %}One Global intranet for a global industrial client{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="caseDetail__hero">
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-cases-bg.jpg{% endblock %}
+            {% block herotitle %}One Global intranet for a global industrial client{% endblock %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' } %}
+                {% block maincontenttitle %} Centralization and clarity with SharePoint Online and Teams {% endblock %}
+                {% block maincontentclient %}  {% endblock %}
+                {% block maincontentintro %}
+                    <p>Many years ago, when a large company started using SharePoint, and made acquisitions along the
+                        way and started using Microsoft 365, it becomes clear that a strategic consolidation might be
+                        the best solution to structure corporate information. Identifying how and where data is spread,
+                        what format it's in, and whether the information is still relevant takes time, but these steps
+                        are required to build a new intranet strategy. A few key decisions shape this strategy:</p>
+                    <ul>
+                        <li>A "no code" intranet</li>
+                        <li>A safe and modern collaboration environment</li>
+                        <li>A structured roll-out with the needed governance in place</li>
+                    </ul>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <p>SharePoint Online is the central hub for the new intranet. It's the area where all the corporate
+                        information gets published, and internal communication is centralized and distributed to the
+                        target audience.</p>
+                    <p>Teams is the collaboration environment. This section allows document storage on a project and
+                        team level together with collaboration functionalities like chat, video conferencing and
+                        discussion areas.</p>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="caseDetail__secondary bgc--light">
+        {% embed './04_organisms/scrollWrap.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--theme-4',
+            'barColor' : 'bgc--theme-4',
+        } %}
+            {% set slider = {
+                accordeon: false,
+                slidertitle: 'Our plan of action',
+                slides: [
+                    {
+                        body: 'Getting our bearings of the as-is situation is vital to see the challenges and opportunities ahead.',
+                    },
+                    {
+                        body: 'Defining a strategy is a crucial step toward a centralized and consistent solution.',
+                    },
+                    {
+                        body: "Onboarding new sites and teams with a personal approach, we make sure their needs are covered. Assisting where possible, supported by governance that empowers users. That's how we roll!",
+                    },
+                ]
+            } %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__secondary bgc--light spacer--in-top">
+
+        {% embed './03_molecules/testimony.html.twig'
+            with {
+            'bgColor' : 'bgc--theme-5',
+            'fcColor' : 'fc--light',
+        } %}
+            {% block testimonyviusaltop %} semasu-case-quote-1.jpg {% endblock %}
+            {% block testimonyquote %} "Our intranet and collaboration environments urgently needed to be sorted out. Refreshing the content and centralizing the relevant information at the right location is important to inform our employees efficiently." {% endblock %}
+            {% block testimonyviusalbottom %} semasu-case-quote-2.jpg {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}
+
+    </section>
+
+    <section class="caseDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More cases {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} casesitem-6steps.jpg {% endblock %}
+                {% block readmorelink %} /cases {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Looking for a simular solution for your company? {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Contact{% endblock %}
+{% block ogtitle %}Contact{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+<section class="contact__hero bgc--theme-0">
+  
+  {% embed './04_organisms/hero.html.twig' with {'fcColor' : 'fc--light', 'bgColor': 'bgc--theme-0', 'variant': 'hero--split' } %}
+    {% block herotitle %} Contact {% endblock %}
+    {% block herosubtitle %} We are here for you. Slide a quick note under our door, and before you realize, we are talking business over your favorite hot beverage. {% endblock %}
+  {% endembed %}
+  
+  {% include './02_atoms/flare/flare.html.twig' with {'animate' : true, 'flareColor': 'theme-2'} %}
+
+</section>    
+
+<section class="contact__primary section--xlarge spacer--in-top">
+    
+  {% include './04_organisms/contactForm.html.twig' %} 
+
+</section>
+
+<section class="contact__secondary spacer--in-top">
+
+	{% include './03_molecules/contactDetails.html.twig' %}
+
+</section>
+
+{% endblock %}

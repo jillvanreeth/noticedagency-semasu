@@ -1,0 +1,99 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Microsoft 365 offers a lot{% endblock %}
+{% block ogtitle %}Microsoft 365 offers a lot, but what options are valuable for me?{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="blogDetail__hero">
+
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-blog-hero.jpg{% endblock %}
+            {% block herotitle %}Microsoft 365 offers a lot, but what options are valuable for me?{% endblock %}
+        {% endembed %}
+
+    </section>
+
+    <section class="blogDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-0' } %}
+                {% block maincontenttitle %} What options are valuable for me? {% endblock %}
+                {% block maincontentbody %}
+                    <p>A lot of organizations that use Microsoft 365 are overwhelmed by the number of applications
+                        Microsoft 365 offers. It’s not always clear what can be used for what, and sometimes a tool
+                        isn’t mature enough to present it to your workforce. Often, implementation of Microsoft 365
+                        happens in one of the following ways:</p>
+                    <ul>
+                        <li><strong>A limited implementation</strong>: using email through Outlook/Exchange Online and
+                            Skype for business for chat and voice conversations. Other Microsoft 365 apps are disabled.
+                        </li>
+                        <li><strong>All you can eat implementation</strong>: email gets migrated to Outlook/Exchange
+                            Online and a number of basic applications are implemented. The rest of Microsoft 365 is free
+                            to use by personal preference.
+                        </li>
+                        <li><strong>A guided implementation</strong>: not all applications are open to all users, but a
+                            selection has been made that are supported by the IT department.
+                        </li>
+                    </ul>
+                    <p>At Semasu, we firmly believe that a guided implementation offers the best opportunity to
+                        implement the correct tools. We can steer clear from the typical pitfalls and jumpstart
+                        initiatives, thanks to our many years of experience with similar implementations.</p>
+                    <p>Flooding users with tools is not the best idea to start your Microsoft 365 implementation.
+                        Finding your critical requirements and finding the correct answers within the Microsoft 365
+                        suite is a better approach. This approach allows you to:</p>
+                    <ul>
+                        <li><strong>Focus on what matters most.</strong> Look for solutions that cover the needs of most
+                            users, relieves
+                            the most pain in the organization, enables other processes to be more efficient, etc.
+                        </li>
+                        <li>Setup a <strong>roadmap</strong> at a pace that is in accordance with the ambition of the
+                            organization.
+                        </li>
+                        <li>Include <strong>user adoption</strong> efforts while implementing applications. Organize
+                            trainings,
+                            communicate, onboard, ensure management buy-in, etc.
+                        </li>
+                        <li>Offer <strong>support</strong> for the critical application. Users need a safety to rely on
+                            in case something
+                            is unclear or isn’t doing what they expect.
+                        </li>
+                    </ul>
+                    <p>The choices aren’t always easy, as there are applications in Microsoft 365 with overlapping
+                        functionality. Depending on the culture, you can choose a specific app. You can even allow
+                        different overlapping apps as long as the governance of the aspects mentioned above, are in
+                        place.</p>
+                    <p>We strongly believe every app in Microsoft 365 can deliver value. The critical requirement to
+                        tap into that value is to plan implementation and prepare the organization for it. With the
+                        right user adoption effort in place for these apps, the new application will bring value to your
+                        organization.</p>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </section>
+
+    <section class="blogDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More news {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} semasu-blog-detail-2.jpg {% endblock %}
+                {% block readmorelink %} /blog {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Need help to get more out of Microsoft 365?  {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Get in touch {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+/**
+ *
+ * TYPOGRAPHY: VARS
+ *
+ */
+
+
+$font-main-light: 'GraphikLC-Light';
+$font-main-normal: 'GraphikLC-Regular';
+$font-main-medium: 'GraphikLC-Medium';
+$font-main-bold: 'GraphikLC-Bold';
+
+@font-face {
+  font-family: $font-main-light;
+  src: url('../font/GraphikLC-Light.woff2') format('woff2'),
+  url('../font/GraphikLC-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-main-normal;
+  src: url('../font/GraphikLC-Regular.woff2') format('woff2'),
+  url('../font/GraphikLC-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-main-medium;
+  src: url('../font/GraphikLC-Medium.woff2') format('woff2'),
+  url('../font/GraphikLC-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-main-bold;
+  src: url('../font/GraphikLC-Bold.woff2') format('woff2'),
+  url('../font/GraphikLC-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$fonts: (
+	'light'  : $font-main-light,
+	'normal'  : $font-main-normal,
+	'medium'  : $font-main-medium,
+	'bold'  : $font-main-bold,
+);
+
+$fontSizes: (
+	'inherit' : inherit,
+	'xxsmall' : 12px,
+	'xsmall'  : 15px,
+	'small'  	: 17px,
+	'medium'  : 18px,
+	'large'   : 20px,
+	'xlarge'  : 24px,
+	'xxlarge'	: 30px,
+	'xxxlarge': 60px,
+);
+
+$titleSizes: (
+	'inherit' : inherit,
+	'h6'  	  : 17px,
+	'h5'      : 20px,
+	'h4'      : 24px,
+	'h3'      : 36px,
+	'h2'			: 45px,
+	'h1'      : 60px,
+	'h0'      : 100px,
+);

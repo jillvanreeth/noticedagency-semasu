@@ -1,0 +1,111 @@
+.heroVisual {
+	@include media('small') {
+		margin-bottom: -400px;
+		padding: 160px 0 400px;
+	}
+	@include media('large') {
+		padding: (gap('xlarge') + 150px) gap('large') 400px;
+	}
+
+	position: relative;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('xxlarge') 0 0;
+	overflow: hidden;
+}
+
+.heroVisual__content {
+	@include media('small') {
+		position: absolute;
+		bottom: gap('small');
+		left: gap('large');
+		max-width: 80%;
+	}
+	@include media('large') {
+		right: gap('medium');
+		left: auto;
+		max-width: 60%;
+	}
+
+	transition: transform 300ms ease;
+	position: absolute;
+	right: gap('medium');
+	right: gap('small');
+	bottom: gap('small');
+	left: gap('small');
+	z-index: 2;
+
+	&:hover {
+		transform: scale(.98);
+		
+		& + .heroVisual__visual__sizer {
+			transform: scale(.98);
+		}
+	}
+}
+
+.heroVisual__visual {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+
+	img {
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.heroVisual__visual__sizer {
+	transition: transform 300ms ease;
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-top: 50%;
+}
+
+.heroVisual__visual__inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.heroVisual__visual__reset {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.heroVisual__title {
+	@include media('small') {
+		padding: 0;
+		font-family: font('bold');
+		font-size: titleSize('h3') / 1.2;
+		line-height: 1.375;
+		border: 0;
+	}
+	@include media('large') {
+		font-size: titleSize('h3');
+	}
+
+	display: inline-block;
+	margin: 0;
+	padding-bottom: 5px;
+	color: color('light');
+	font-family: font('normal');
+	font-size: fontSize('small');
+	text-decoration: none;
+	border-bottom: 1px solid color('light');
+}

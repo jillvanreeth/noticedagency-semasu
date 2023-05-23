@@ -1,0 +1,13 @@
+<div class="fullscreenVisual">
+	
+	<div class="fullscreenVisual__overlay"></div>
+
+	<div class="fullscreenVisual__theVisual" style="background-image: url('/dist/img/{{ block('herovisualsrc')}}')">
+	</div>
+
+	<div class="fullscreenVisual__inner">
+		<div class="fullscreenVisual__symbol">{% include './02_atoms/symbols/arrow-circle--down.html.twig' with { 'symbolFill' : 'fill--light'} %}</div>
+		<h1 class="fullscreenVisual__title heading--1">{% block herotitle %}Hero title{% endblock %}</h1>
+	</div>
+
+</div>

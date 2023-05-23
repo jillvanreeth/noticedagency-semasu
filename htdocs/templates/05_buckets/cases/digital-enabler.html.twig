@@ -1,0 +1,112 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Digital Enabler{% endblock %}
+{% block ogtitle %} Digital Enabler at a Global Tube Manufacturer {% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+    <section class="caseDetail__hero">
+        {% embed './04_organisms/fullscreenVisual.html.twig' %}
+            {% block herovisualsrc %}semasu-cases-bg.jpg{% endblock %}
+            {% block herotitle %} Digital Enabler at a Global Tube Manufacturer {% endblock %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__primary bgc--light spacer--in-top">
+        <div class="section--xlarge">
+            {% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' }%}
+                {% block maincontenttitle %} The Digital Journey request {% endblock %}
+                {% block maincontentclient %} {% endblock %}
+                {% block maincontentintro %}
+                    <p>To improve our customer's experience and a way to enter into new business models, we decided to launch a digital community. The solution has to deliver answers to:</p>
+                {% endblock %}
+                {% block maincontentbody %}
+                    <ul>
+                        <li>
+                            Keeping all employees up-to-date about the company's digital journey
+                        </li>
+                        <li>
+                            Updates on ongoing digital projects throughout the entire company
+                        </li>
+                        <li>
+                            Share and comment on digital news from the world outside
+                        </li>
+                        <li>Post new digital ideas to be reviewed by a digital council </li>
+                    </ul>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
+
+
+    <section class="caseDetail__secondary bgc--light">
+        {% embed './04_organisms/scrollWrap.html.twig'
+            with {
+            'symbolFill' : 'fill--theme-4',
+            'titleColor' : 'fc--theme-4',
+            'bodyColor' : 'fc--theme-4',
+            'barColor' : 'bgc--theme-4',
+        }
+        %}
+            {%
+                set slider = {
+                accordeon: false,
+                slidertitle: 'Our plan of action',
+                slides: [
+                    {
+                        body: "Not only have we captured requirements, business needs, and forecasted the expected outcome, we also determined the future goals of the digital community. Ensuring long-lasting solutions, that's what we do.",
+                    },
+                    {
+                        body: 'We designed a solution for the key stakeholders and took them along the different phases of development. We collected feedback and adjusted our approach, each step coming closer to the preferred result.',
+                    },
+                    {
+                        body: "Before taking the solution 'live', we collected feedback from random end-users to make sure the solution worked and was logical for all.",
+                    },
+                ]
+            }
+            %}
+        {% endembed %}
+    </section>
+
+    <section class="caseDetail__secondary bgc--light spacer--in-top">
+
+        {% embed './03_molecules/testimony.html.twig'
+            with {
+            'bgColor' : 'bgc--theme-5',
+            'fcColor' : 'fc--light',
+        }
+        %}
+            {% block testimonyviusaltop %} semasu-case-quote-1.jpg {% endblock %}
+            {% block testimonyquote %} "Having a structured central location to share information on the Digital Journey has proven to be an effective communication platform. It's a flexible solution that caters to all the required functionalities we expect from this community." {% endblock %}
+            {% block testimonyviusalbottom %} semasu-case-quote-2.jpg {% endblock %}
+        {% endembed %}
+
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}
+
+    </section>
+
+    <section class="caseDetail__outro bgc--light">
+
+        <div class="section--xlarge">
+            {% embed './03_molecules/readMore.html.twig' %}
+                {% block readmoretitle %} More cases {% endblock %}
+                {% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+                {% block readmorevisual %} casesitem-6steps.jpg {% endblock %}
+                {% block readmorelink %} /cases {% endblock %}
+            {% endembed %}
+        </div>
+
+        <div class="section--small spacer--in-top">
+            {% embed './03_molecules/cta.html.twig' %}
+                {% block ctatitle %} Looking for a simular solution for your company? {% endblock %}
+                {% block ctadesc %}  {% endblock %}
+                {% block ctalabel %} Let's talk {% endblock %}
+                {% block ctalink %} /contact {% endblock %}
+            {% endembed %}
+        </div>
+        {% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}
+    </section>
+
+
+{% endblock %}

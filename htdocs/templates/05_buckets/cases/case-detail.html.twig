@@ -1,0 +1,101 @@
+{% extends "./00_globals/master.html.twig" %}
+
+{% block title %}Collaboration roadmap for a legal firm{% endblock %}
+{% block ogtitle %}Collaboration roadmap for a legal firm{% endblock %}
+{% block colormode %}lightMode{% endblock %}
+
+{% block content %}
+
+<section class="caseDetail__hero">
+	{% embed './04_organisms/fullscreenVisual.html.twig' %}
+		{% block herovisualsrc %}semasu-case-detail.jpg{% endblock %}  
+    {% block herotitle %}Collaboration roadmap for a legal firm{% endblock %}
+	{% endembed %}	
+</section>
+
+<section class="caseDetail__primary bgc--light spacer--in-top">
+	<div class="section--xlarge">
+	{% embed './04_organisms/mainContent.html.twig' with { 'fcColor' : 'fc--theme-5' }%}
+		{% block maincontenttitle %} The collaboration problem {% endblock %}
+		{% block maincontentclient %} Alto advocaten {% endblock %}
+		{% block maincontentintro %}
+			<p>Our client Alto advocaten contacted us to clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+		{% endblock %}
+		{% block maincontentbody %}
+			<p>Ut wisi enim ad minim veniam, quis <a href="#0">nostrud</a> exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate <strong> velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero</strong> eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+		{% endblock %}
+	{% endembed %}
+	</div>
+</section>
+
+
+<section class="caseDetail__secondary bgc--light">
+	{% embed './04_organisms/scrollWrap.html.twig' 
+	  with { 
+	  	'symbolFill' : 'fill--theme-4', 
+	  	'titleColor' : 'fc--theme-4', 
+	  	'bodyColor' : 'fc--theme-4',  
+	  	'barColor' : 'bgc--theme-4',
+	  } 
+	%}
+		{% 
+			set slider = {
+				accordeon: false,
+				slidertitle: 'Our plan of action',
+				slides: [
+					{ 
+						body: 'We started out with a training session mod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.',
+					},
+					{ 
+						body: 'Invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.',
+					},
+					{ 						
+						body: 'Invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.',
+					},
+				]
+			}
+		%}
+ 	{% endembed %}
+</section>
+
+<section class="caseDetail__secondary bgc--light spacer--in-top">
+	
+		{% embed './03_molecules/testimony.html.twig' 
+			with {
+				'bgColor' : 'bgc--theme-5',
+				'fcColor' : 'fc--light',
+			} 
+		%}
+			{% block testimonyviusaltop %} semasu-case-quote-1.jpg {% endblock %}
+			{% block testimonyquote %} "Our productivity has maximised since we started at vero eos et accusam et justo duo dolores et ea rebumeirmod tempor invidunt ut labore et dolore magna." {% endblock %}
+			{% block testimonyviusalbottom %} semasu-case-quote-2.jpg {% endblock %}
+		{% endembed %}
+	
+	{% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-4' } %}	
+
+</section>
+
+<section class="caseDetail__outro bgc--light">
+
+	<div class="section--xlarge">
+		{% embed './03_molecules/readMore.html.twig' %}
+			{% block readmoretitle %} More cases {% endblock %}
+			{% block readmorelabel %} Microsoft 365 migration in 6 easy steps {% endblock %}
+			{% block readmorevisual %} casesitem-6steps.jpg {% endblock %}
+			{% block readmorelink %} /cases {% endblock %}
+		{% endembed %}	
+	</div>
+
+   <div class="section--small spacer--in-top">
+	  {% embed './03_molecules/cta.html.twig' %}
+	    {% block ctatitle %} Looking for a simular solution for your company? {% endblock %}
+	    {% block ctadesc %} At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. {% endblock %}
+	    {% block ctalabel %} Let's talk {% endblock %}
+	    {% block ctalink %} /contact {% endblock %}  
+	  {% endembed %}
+	</div>
+	{% include './02_atoms/rectangle.html.twig' with {'bgColor' : 'bgc--theme-1' } %}	
+</section>
+
+
+{% endblock %}

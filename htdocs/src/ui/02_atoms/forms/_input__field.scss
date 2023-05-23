@@ -1,0 +1,48 @@
+.input__field {
+	display: block;
+	width: 100%;
+	height: 65px;
+	padding: 0;
+	color: color('neutrals-2');
+	font-size: fontSize('xsmall');
+	font-family: $font-main-medium;
+	border: 0;
+	border-bottom: 1px solid color('neutrals-1');
+	border-radius: 0;
+	outline: none;
+	background-color: color('light');
+	
+	&:focus {
+		box-shadow: none;
+	}
+
+	.is-invalid & {
+		color: color('negative');
+	}
+
+	.input--select & {
+		appearance: none;
+	}
+
+	.input--textarea & {
+		height: 150px;
+		padding: fontSize('xsmall') 0 0;
+		resize: vertical;
+	}
+}
+
+input:-webkit-autofill {
+	background-color: color('light') !important;
+	-webkit-box-shadow: 0 0 0 30px color('light') inset !important;
+
+	-webkit-text-fill-color: color('neutrals-2');
+}
+
+::-ms-clear {
+    display: none;
+}
+
+.input {
+	position: relative;
+	display: block;
+}

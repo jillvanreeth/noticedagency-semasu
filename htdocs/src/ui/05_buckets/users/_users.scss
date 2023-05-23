@@ -1,0 +1,45 @@
+.users__hero {
+	overflow: hidden;
+	position: relative;
+}
+
+.users__intro {
+	@include media('small') {
+		margin-top: gap('xlarge');
+		padding-top: 0;
+	}
+	@include media('large') {
+		margin-top: - gap('large');
+	}
+
+	padding-top: gap('large');
+}
+
+.users__primary {
+	overflow-x: hidden;
+}
+
+.users__primary__header {
+	display: block;
+	width: 100%;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('xxsmall') gap('small');
+
+	@include media('small') {
+		display: none;
+	}
+}
+
+.users__primary__title {
+	color: inherit; font-size: fontSize('xsmall');
+	font-family: font('light'); color: color('neutrals-1');
+}
+
+
+.users__outro {
+	
+	@include media('large') {
+		max-width: section('small');	
+	}
+}

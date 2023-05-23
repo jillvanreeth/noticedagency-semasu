@@ -1,0 +1,57 @@
+/* 
+*
+*
+* SCROLLWRAP STYLES
+*
+*/
+
+@include media('small', 'max-width') {
+	.scrollWrap {
+		.draggslider__header {
+			position: sticky;
+			top: 70px;
+			padding: gap('small') gap('small') 0;
+		}
+
+		.draggslider__title {
+			font-family: font('bold');
+			font-size: fontSize('large');
+		}
+
+		.draggslider__header__symbol {
+			display: none;
+		}
+
+		.draggslider__item {
+			position: sticky;
+			top: 140px;
+			height: 100vh;
+			padding: gap('medium') gap('small');
+			background-color: color('light');
+		}
+
+		.draggslider__content {
+			display: flex;
+		}
+
+		.draggslider__item__step {
+			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			font-family: font('light');
+			font-size: 20px;
+			line-height: 1;
+			border: 2px solid;
+			border-radius: 50%;
+
+			flex-shrink: 0;
+		}
+
+		.draggslider__body {
+			padding-left: gap('xsmall');
+		}
+	}
+}

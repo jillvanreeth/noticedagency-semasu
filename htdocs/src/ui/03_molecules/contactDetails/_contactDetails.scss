@@ -1,0 +1,210 @@
+.contactDetails {
+	@include media('large') {
+		flex-direction: row;
+		padding: 0 gap('small');
+		padding: 0;
+		background-color: color('theme-4','lighter',25);
+	}
+
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.contactDetails__visual {
+	@include media('small') {
+		margin: 0 0 -15%;
+		padding-top: 60%;
+	}
+	@include media('large') {
+		width: 50%;
+		height: auto;
+		margin: 0;
+		padding-top: 0;
+	}
+
+	position: relative;
+	width: 100%;
+	height: 0;
+	margin: 0 0 -35%;
+	padding-top: 70%;
+	overflow: hidden;
+
+	img {
+		@include media('medium') {
+			min-width: 100%;
+			max-width: initial;
+			min-height: 100%;
+			max-height: initial;
+		}
+		// @include media('large') {
+		// 	transform: translate(0,-50%);
+		// 	left: 0;
+		// }
+
+		transform: translate(-50%,-50%);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.contactDetails__visual__sizer {
+	@include media('large') {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	position: absolute;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+	padding: 0;
+}
+
+.contactDetails__visual__reset {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.contactDetails__inner {
+	@include media('small') {
+		padding: 0 gap('xlarge') 0 0;
+	}
+	@include media('medium') {
+		padding: 0 gap('xlarge') 0 0;
+	}
+	@include media('large') {
+		max-width: section('xlarge') / 2;
+		margin-left: auto;
+		padding: 0 gap('large');
+	}
+
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	padding: 0 gap('small');
+}
+
+.contactDetails__content {
+	@include media('small') {
+		padding: gap('xlarge') gap('large');
+	}
+	@include media('large') {
+		padding: gap('xxlarge') 0;
+	}
+
+	display: block;
+	width: 100%;
+	padding: gap('medium') gap('small');
+	background-color: color('theme-4','lighter',25);
+}
+
+
+
+.contactDetails__address {
+	@include media('medium') {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	@include media('large') {
+		display: block;
+	}
+
+	display: block;
+	color: color('theme-4');
+	font-style: normal;
+}
+
+.contactDetails__addressWrap {
+	@include media('medium') {
+		flex: 0 0 46%;
+		padding: 0;
+	}
+	@include media('large') {
+		padding-top: gap('medium');
+	}
+
+	padding-top: gap('xsmall');
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.contactDetails__address__helper {
+	@include media('large') {
+		font-size: fontSize('medium');
+	}
+
+	display: block;
+	font-family: font('normal');
+	font-size: fontSize('small');
+}
+
+.contactDetails__address__link {
+	@include media('medium') {
+		padding-top: gap('xxsmall');
+		font-size: fontSize('xxlarge');
+	}
+	@include media('large') {
+		padding-top: 0;
+		font-size: titleSize('h3');
+	}
+
+	display: block;
+	padding-top: gap('xxxsmall');
+	color: color('theme-4');
+	font-family: font('bold');
+	font-size: fontSize('large');
+	text-decoration: none;
+	opacity: 1;
+
+	&:hover {
+		color: color('theme-4','darker');
+	}
+}
+
+.contactDetails__theAddress {
+	@include media('medium') {
+		flex: 1 0 100%;
+		padding-top: gap('large');
+		font-size: fontSize('small');
+	}
+	@include media('large') {
+		padding-top: gap('xlarge');
+		font-size: fontSize('medium');
+	}
+
+	display: block;
+	padding-top: gap('medium');
+	font-family: font('normal');
+	font-size: fontSize('xsmall');
+	opacity: .6;
+}
+
+.contactDetails__social {
+	@include media('medium') {
+		padding-top: gap('xxsmall');
+		font-size: fontSize('small');
+	}
+	@include media('large') {
+		font-size: fontSize('medium');
+	}
+
+	display: block;
+	padding-top: gap('xxxsmall');
+	color: color('theme-4');
+	font-size: fontSize('xsmall');
+}

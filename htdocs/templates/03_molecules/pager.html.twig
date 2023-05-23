@@ -1,0 +1,34 @@
+<div class="pager">
+	<ul class="pager__list">
+	
+		<li class="pager__navs prev {{activePage == 1 ? 'is-hidden'-}}">
+			<a href="/blog/blog-{{activePage - 1}}" class="pager__navs__symbol">
+				{% include './02_atoms/symbols/arrow--left.html.twig' with { 'symbolFill' : 'fill--neutrals-0' } %}
+			</a>
+		</li>
+
+		<li class="pager__list__item {{activePage == 1 ? 'pager-is-active'-}}">
+			<a href="/blog/blog-1" class="pager__link">
+				<span class="pager__label">1</span>
+			</a>
+		</li>	
+		
+		<li class="pager__list__item {{activePage == 2 ? 'pager-is-active'-}}">
+			<a href="/blog/blog-2" class="pager__link">
+				<span class="pager__label">2</span>
+			</a>
+		</li>
+
+		<li class="pager__list__item {{activePage == 3 ? 'pager-is-active'-}}">
+			<a href="/blog/blog-3" class="pager__link">
+				<span class="pager__label">3</span>
+			</a>
+		</li>
+
+		<li class="pager__navs next {{activePage == 3 ? 'is-hidden'-}}">
+			<a href="/blog/blog-{{activePage + 1}}" class="pager__navs__symbol">
+				{% include './02_atoms/symbols/arrow--right.html.twig' with { 'symbolFill' : 'fill--neutrals-0' } %}
+			</a>
+		</li>
+	</ul>
+</div>
